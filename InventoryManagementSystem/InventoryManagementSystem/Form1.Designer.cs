@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
+            login_showPass = new CheckBox();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
@@ -40,7 +41,6 @@
             register_lable = new Label();
             label1 = new Label();
             button1 = new Button();
-            login_showPass = new CheckBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -65,6 +65,18 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(640, 481);
             panel1.TabIndex = 0;
+            // 
+            // login_showPass
+            // 
+            login_showPass.AutoSize = true;
+            login_showPass.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            login_showPass.Location = new Point(310, 333);
+            login_showPass.Name = "login_showPass";
+            login_showPass.Size = new Size(174, 25);
+            login_showPass.TabIndex = 9;
+            login_showPass.Text = "Show Password";
+            login_showPass.UseVisualStyleBackColor = true;
+            login_showPass.CheckedChanged += login_showPass_CheckedChanged;
             // 
             // pictureBox3
             // 
@@ -92,7 +104,7 @@
             // 
             pictureBox1.BackColor = Color.FromArgb(238, 245, 255);
             pictureBox1.ErrorImage = null;
-            pictureBox1.Image = Properties.Resources.img1;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(264, 33);
             pictureBox1.Margin = new Padding(0);
             pictureBox1.Name = "pictureBox1";
@@ -112,6 +124,7 @@
             login_btn.TabIndex = 5;
             login_btn.Text = "Login";
             login_btn.UseVisualStyleBackColor = false;
+            login_btn.Click += login_btn_Click;
             // 
             // login_password
             // 
@@ -154,7 +167,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(205, 155);
+            label1.Location = new Point(224, 159);
             label1.Name = "label1";
             label1.Size = new Size(175, 27);
             label1.TabIndex = 0;
@@ -177,18 +190,6 @@
             button1.TextAlign = ContentAlignment.TopCenter;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
-            // 
-            // login_showPass
-            // 
-            login_showPass.AutoSize = true;
-            login_showPass.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            login_showPass.Location = new Point(310, 333);
-            login_showPass.Name = "login_showPass";
-            login_showPass.Size = new Size(174, 25);
-            login_showPass.TabIndex = 9;
-            login_showPass.Text = "Show Password";
-            login_showPass.UseVisualStyleBackColor = true;
-            login_showPass.CheckedChanged += login_showPass_CheckedChanged;
             // 
             // Form1
             // 

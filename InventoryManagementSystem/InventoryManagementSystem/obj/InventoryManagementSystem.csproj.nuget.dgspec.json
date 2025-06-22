@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BMS ABHIMANI\\Desktop\\projects\\visual\\InventoryManagementSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj": {}
+    "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BMS ABHIMANI\\Desktop\\projects\\visual\\InventoryManagementSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj": {
+    "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BMS ABHIMANI\\Desktop\\projects\\visual\\InventoryManagementSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
+        "projectUniqueName": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
         "projectName": "InventoryManagementSystem",
-        "projectPath": "C:\\Users\\BMS ABHIMANI\\Desktop\\projects\\visual\\InventoryManagementSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
-        "packagesPath": "C:\\Users\\BMS ABHIMANI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BMS ABHIMANI\\Desktop\\projects\\visual\\InventoryManagementSystem\\InventoryManagementSystem\\obj\\",
+        "projectPath": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\BMS ABHIMANI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -50,6 +50,10 @@
         "net9.0-windows7.0": {
           "targetAlias": "net9.0-windows",
           "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.9.0, )"

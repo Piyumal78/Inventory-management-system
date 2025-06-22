@@ -14,12 +14,13 @@ namespace InventoryManagementSystem
 {
     public partial class RegisterForm : Form
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=LAPTOP-TATBKV2U\SQLEXPRESS;Initial Catalog=inventory_management;Integrated Security=True;Trust Server Certificate=True");
+        SqlConnection connect = new SqlConnection(@"Data Source=PIYUMAL\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False");
         public RegisterForm()
         {
             InitializeComponent();
         }
 
+        
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
