@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>InventoryManagementSystem</id>
+    <version>1.0.0</version>
+    <authors>InventoryManagementSystem</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="6ad4d62a221ca376cb525ed6c5440427b17b9d09" />
+    <dependencies>
+      <group targetFramework="net9.0-windows7.0">
+        <dependency id="Microsoft.Data.SqlClient" version="6.0.2" exclude="Build,Analyzers" />
+        <dependency id="System.Data.SqlClient" version="4.9.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net9.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\bin\Debug\net9.0-windows\InventoryManagementSystem.runtimeconfig.json" target="lib\net9.0-windows7.0\InventoryManagementSystem.runtimeconfig.json" />
+    <file src="D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\bin\Debug\net9.0-windows\InventoryManagementSystem.dll" target="lib\net9.0-windows7.0\InventoryManagementSystem.dll" />
+  </files>
+</package>
