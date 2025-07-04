@@ -1,13 +1,13 @@
 ﻿namespace InventoryManagementSystem
 {
-    partial class AdminAddUsers
+    partial class AdminAddUser
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,15 +20,16 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             addUsers_clearBtn = new Button();
             addUsers_removeBtn = new Button();
@@ -66,11 +67,10 @@
             panel1.Controls.Add(addUsers_username);
             panel1.Controls.Add(label1);
             panel1.ForeColor = Color.White;
-            panel1.Location = new Point(24, 29);
+            panel1.Location = new Point(23, 27);
             panel1.Name = "panel1";
             panel1.Size = new Size(325, 653);
-            panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            panel1.TabIndex = 2;
             // 
             // addUsers_clearBtn
             // 
@@ -113,6 +113,7 @@
             addUsers_updateBtn.TabIndex = 9;
             addUsers_updateBtn.Text = "Update";
             addUsers_updateBtn.UseVisualStyleBackColor = false;
+            addUsers_updateBtn.Click += addUsers_updateBtn_Click;
             // 
             // addUsers_addBtn
             // 
@@ -209,24 +210,33 @@
             // 
             panel2.Controls.Add(dataGridView1);
             panel2.Controls.Add(label5);
-            panel2.Location = new Point(369, 29);
+            panel2.Location = new Point(368, 27);
             panel2.Name = "panel2";
             panel2.Size = new Size(635, 653);
-            panel2.TabIndex = 1;
+            panel2.TabIndex = 3;
             // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(128, 128, 255);
             dataGridViewCellStyle1.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.ForeColor = Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.Location = new Point(27, 75);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
@@ -234,28 +244,26 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(605, 560);
             dataGridView1.TabIndex = 2;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = SystemColors.ActiveCaptionText;
             label5.Location = new Point(27, 34);
             label5.Name = "label5";
             label5.Size = new Size(132, 22);
             label5.TabIndex = 1;
             label5.Text = "All User's Data";
             // 
-            // AdminAddUsers
+            // AdminAddUser
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1026, 707);
-            Controls.Add(panel2);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "AdminAddUsers";
-            Text = "AdminAddUsers";
+            Controls.Add(panel2);
+            Name = "AdminAddUser";
+            Size = new Size(1026, 707);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -267,19 +275,19 @@
         #endregion
 
         private Panel panel1;
-        private Panel panel2;
-        private Label label1;
-        private TextBox addUsers_username;
+        private Button addUsers_clearBtn;
+        private Button addUsers_removeBtn;
+        private Button addUsers_updateBtn;
+        private Button addUsers_addBtn;
+        private ComboBox addUsers_status;
+        private Label label4;
         private ComboBox addUsers_role;
         private Label label3;
         private TextBox addUsers_password;
         private Label label2;
-        private Button addUsers_addBtn;
-        private ComboBox addUsers_status;
-        private Label label4;
-        private Button addUsers_clearBtn;
-        private Button addUsers_removeBtn;
-        private Button addUsers_updateBtn;
+        private TextBox addUsers_username;
+        private Label label1;
+        private Panel panel2;
         private DataGridView dataGridView1;
         private Label label5;
     }

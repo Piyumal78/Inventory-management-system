@@ -47,40 +47,13 @@
             label2 = new Label();
             pictureBox1 = new PictureBox();
             panel3 = new Panel();
-            dataGridView1 = new DataGridView();
-            panel4 = new Panel();
-            label6 = new Label();
-            label7 = new Label();
-            pictureBox4 = new PictureBox();
-            panel6 = new Panel();
-            label4 = new Label();
-            pictureBox2 = new PictureBox();
-            panel5 = new Panel();
-            label5 = new Label();
-            label8 = new Label();
-            pictureBox3 = new PictureBox();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            pictureBox5 = new PictureBox();
-            panel7 = new Panel();
-            panel8 = new Panel();
-            panel9 = new Panel();
+            adminDashborad1 = new AdminDashborad();
+            adminAddUser1 = new AdminAddUser();
+            adminAddUser2 = new AdminAddUser();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            panel7.SuspendLayout();
-            panel8.SuspendLayout();
-            panel9.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -91,7 +64,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1309, 88);
+            panel1.Size = new Size(1309, 86);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -141,9 +114,9 @@
             panel2.Controls.Add(label2);
             panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 88);
+            panel2.Location = new Point(0, 86);
             panel2.Name = "panel2";
-            panel2.Size = new Size(283, 707);
+            panel2.Size = new Size(283, 709);
             panel2.TabIndex = 1;
             // 
             // logoutbtn
@@ -334,208 +307,36 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(panel6);
-            panel3.Controls.Add(panel9);
+            panel3.Controls.Add(adminAddUser2);
+            panel3.Controls.Add(adminAddUser1);
+            panel3.Controls.Add(adminDashborad1);
             panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(283, 88);
+            panel3.Location = new Point(283, 86);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1026, 707);
+            panel3.Size = new Size(1026, 709);
             panel3.TabIndex = 2;
             // 
-            // dataGridView1
+            // adminDashborad1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(30, 82);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(929, 268);
-            dataGridView1.TabIndex = 0;
+            adminDashborad1.Location = new Point(0, 0);
+            adminDashborad1.Name = "adminDashborad1";
+            adminDashborad1.Size = new Size(1023, 701);
+            adminDashborad1.TabIndex = 0;
             // 
-            // panel4
+            // adminAddUser1
             // 
-            panel4.BackColor = Color.CornflowerBlue;
-            panel4.Controls.Add(label6);
-            panel4.Controls.Add(label7);
-            panel4.Controls.Add(pictureBox4);
-            panel4.Location = new Point(755, 32);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(227, 198);
-            panel4.TabIndex = 3;
+            adminAddUser1.Location = new Point(0, 0);
+            adminAddUser1.Name = "adminAddUser1";
+            adminAddUser1.Size = new Size(1036, 713);
+            adminAddUser1.TabIndex = 1;
+            adminAddUser1.Load += adminAddUser1_Load_1;
             // 
-            // label6
+            // adminAddUser2
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(129, 156);
-            label6.Name = "label6";
-            label6.Size = new Size(95, 20);
-            label6.TabIndex = 6;
-            label6.Text = "Total Income";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(144, 27);
-            label7.Name = "label7";
-            label7.Size = new Size(44, 20);
-            label7.TabIndex = 5;
-            label7.Text = "$0.00";
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.ErrorImage = (Image)resources.GetObject("pictureBox4.ErrorImage");
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.InitialImage = (Image)resources.GetObject("pictureBox4.InitialImage");
-            pictureBox4.Location = new Point(21, 51);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(104, 102);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 4;
-            pictureBox4.TabStop = false;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.White;
-            panel6.Controls.Add(dataGridView1);
-            panel6.Location = new Point(7, 295);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(1012, 389);
-            panel6.TabIndex = 6;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(126, 28);
-            label4.Name = "label4";
-            label4.Size = new Size(17, 20);
-            label4.TabIndex = 2;
-            label4.Text = "0";
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.ErrorImage = (Image)resources.GetObject("pictureBox2.ErrorImage");
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.InitialImage = (Image)resources.GetObject("pictureBox2.InitialImage");
-            pictureBox2.Location = new Point(14, 52);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(104, 102);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
-            // 
-            // panel5
-            // 
-            panel5.BackColor = Color.CornflowerBlue;
-            panel5.Controls.Add(label5);
-            panel5.Controls.Add(label8);
-            panel5.Controls.Add(pictureBox3);
-            panel5.Location = new Point(508, 32);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(227, 198);
-            panel5.TabIndex = 2;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(113, 156);
-            label5.Name = "label5";
-            label5.Size = new Size(111, 20);
-            label5.TabIndex = 6;
-            label5.Text = "Today's Income";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(128, 27);
-            label8.Name = "label8";
-            label8.Size = new Size(44, 20);
-            label8.TabIndex = 5;
-            label8.Text = "$0.00";
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.ErrorImage = (Image)resources.GetObject("pictureBox3.ErrorImage");
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.InitialImage = (Image)resources.GetObject("pictureBox3.InitialImage");
-            pictureBox3.Location = new Point(16, 51);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(104, 102);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 4;
-            pictureBox3.TabStop = false;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(126, 153);
-            label9.Name = "label9";
-            label9.Size = new Size(66, 20);
-            label9.TabIndex = 3;
-            label9.Text = "All Users";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(125, 152);
-            label10.Name = "label10";
-            label10.Size = new Size(94, 20);
-            label10.TabIndex = 4;
-            label10.Text = "All Customer";
-            label10.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(125, 28);
-            label11.Name = "label11";
-            label11.Size = new Size(17, 20);
-            label11.TabIndex = 3;
-            label11.Text = "0";
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.ErrorImage = null;
-            pictureBox5.Image = Properties.Resources._6;
-            pictureBox5.InitialImage = Properties.Resources._6;
-            pictureBox5.Location = new Point(15, 51);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(104, 102);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 1;
-            pictureBox5.TabStop = false;
-            // 
-            // panel7
-            // 
-            panel7.BackColor = Color.CornflowerBlue;
-            panel7.Controls.Add(label10);
-            panel7.Controls.Add(label11);
-            panel7.Controls.Add(pictureBox5);
-            panel7.Location = new Point(263, 32);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(227, 198);
-            panel7.TabIndex = 1;
-            // 
-            // panel8
-            // 
-            panel8.BackColor = Color.CornflowerBlue;
-            panel8.Controls.Add(label9);
-            panel8.Controls.Add(label4);
-            panel8.Controls.Add(pictureBox2);
-            panel8.Location = new Point(15, 32);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(227, 198);
-            panel8.TabIndex = 0;
-            // 
-            // panel9
-            // 
-            panel9.BackColor = Color.White;
-            panel9.Controls.Add(panel4);
-            panel9.Controls.Add(panel5);
-            panel9.Controls.Add(panel7);
-            panel9.Controls.Add(panel8);
-            panel9.Location = new Point(7, 23);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(1012, 266);
-            panel9.TabIndex = 5;
+            adminAddUser2.Location = new Point(0, 0);
+            adminAddUser2.Name = "adminAddUser2";
+            adminAddUser2.Size = new Size(1282, 884);
+            adminAddUser2.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -557,28 +358,13 @@
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
-            panel9.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private Button button1;
+       
         private Label label1;
         private Panel panel2;
         private PictureBox pictureBox1;
@@ -596,24 +382,8 @@
         private Button button12;
         private Button close;
         private Panel panel3;
-        private Panel panel6;
-        private DataGridView dataGridView1;
-        private Panel panel9;
-        private Panel panel4;
-        private Label label6;
-        private Label label7;
-        private PictureBox pictureBox4;
-        private Panel panel5;
-        private Label label5;
-        private Label label8;
-        private PictureBox pictureBox3;
-        private Panel panel7;
-        private Label label10;
-        private Label label11;
-        private PictureBox pictureBox5;
-        private Panel panel8;
-        private Label label9;
-        private Label label4;
-        private PictureBox pictureBox2;
+        private AdminDashborad adminDashborad1;
+        private AdminAddUser adminAddUser2;
+        private AdminAddUser adminAddUser1;
     }
 }

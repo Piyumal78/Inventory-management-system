@@ -1,13 +1,13 @@
 ﻿namespace InventoryManagementSystem
 {
-    partial class AdminDashboard
+    partial class AdminDashborad
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,59 +20,56 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
-            panel1 = new Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashborad));
+            dataGridView1 = new DataGridView();
             panel4 = new Panel();
             label6 = new Label();
             label7 = new Label();
             pictureBox4 = new PictureBox();
+            panel6 = new Panel();
+            label1 = new Label();
+            label2 = new Label();
+            pictureBox1 = new PictureBox();
             panel5 = new Panel();
             label4 = new Label();
             label5 = new Label();
             pictureBox3 = new PictureBox();
-            panel3 = new Panel();
+            label3 = new Label();
             label9 = new Label();
             label8 = new Label();
             pictureBox2 = new PictureBox();
+            panel3 = new Panel();
             panel2 = new Panel();
-            label3 = new Label();
-            label2 = new Label();
-            pictureBox1 = new PictureBox();
-            panel6 = new Panel();
-            dataGridView1 = new DataGridView();
-            label1 = new Label();
-            panel1.SuspendLayout();
+            panel1 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel3.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // dataGridView1
             // 
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(panel4);
-            panel1.Controls.Add(panel5);
-            panel1.Controls.Add(panel3);
-            panel1.Controls.Add(panel2);
-            panel1.Location = new Point(12, 34);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1012, 266);
-            panel1.TabIndex = 0;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(30, 82);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(929, 268);
+            dataGridView1.TabIndex = 0;
             // 
             // panel4
             // 
@@ -115,6 +112,47 @@
             pictureBox4.TabIndex = 4;
             pictureBox4.TabStop = false;
             // 
+            // panel6
+            // 
+            panel6.BackColor = Color.White;
+            panel6.Controls.Add(label1);
+            panel6.Controls.Add(dataGridView1);
+            panel6.Location = new Point(7, 295);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(1002, 389);
+            panel6.TabIndex = 6;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(326, 29);
+            label1.Name = "label1";
+            label1.Size = new Size(205, 28);
+            label1.TabIndex = 1;
+            label1.Text = "All Today's Cutmoter ";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(126, 28);
+            label2.Name = "label2";
+            label2.Size = new Size(17, 20);
+            label2.TabIndex = 2;
+            label2.Text = "0";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.ErrorImage = (Image)resources.GetObject("pictureBox1.ErrorImage");
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.InitialImage = (Image)resources.GetObject("pictureBox1.InitialImage");
+            pictureBox1.Location = new Point(14, 52);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(104, 102);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
             // panel5
             // 
             panel5.BackColor = Color.CornflowerBlue;
@@ -156,16 +194,14 @@
             pictureBox3.TabIndex = 4;
             pictureBox3.TabStop = false;
             // 
-            // panel3
+            // label3
             // 
-            panel3.BackColor = Color.CornflowerBlue;
-            panel3.Controls.Add(label9);
-            panel3.Controls.Add(label8);
-            panel3.Controls.Add(pictureBox2);
-            panel3.Location = new Point(263, 32);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(227, 198);
-            panel3.TabIndex = 1;
+            label3.AutoSize = true;
+            label3.Location = new Point(126, 153);
+            label3.Name = "label3";
+            label3.Size = new Size(66, 20);
+            label3.TabIndex = 3;
+            label3.Text = "All Users";
             // 
             // label9
             // 
@@ -198,6 +234,17 @@
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
+            // panel3
+            // 
+            panel3.BackColor = Color.CornflowerBlue;
+            panel3.Controls.Add(label9);
+            panel3.Controls.Add(label8);
+            panel3.Controls.Add(pictureBox2);
+            panel3.Location = new Point(263, 32);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(227, 198);
+            panel3.TabIndex = 1;
+            // 
             // panel2
             // 
             panel2.BackColor = Color.CornflowerBlue;
@@ -208,118 +255,67 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(227, 198);
             panel2.TabIndex = 0;
-            panel2.Paint += panel2_Paint;
             // 
-            // label3
+            // panel1
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(126, 153);
-            label3.Name = "label3";
-            label3.Size = new Size(66, 20);
-            label3.TabIndex = 3;
-            label3.Text = "All Users";
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(panel4);
+            panel1.Controls.Add(panel5);
+            panel1.Controls.Add(panel3);
+            panel1.Controls.Add(panel2);
+            panel1.Location = new Point(7, 23);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1012, 266);
+            panel1.TabIndex = 5;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(126, 28);
-            label2.Name = "label2";
-            label2.Size = new Size(17, 20);
-            label2.TabIndex = 2;
-            label2.Text = "0";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.ErrorImage = (Image)resources.GetObject("pictureBox1.ErrorImage");
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.InitialImage = (Image)resources.GetObject("pictureBox1.InitialImage");
-            pictureBox1.Location = new Point(14, 52);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(104, 102);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.White;
-            panel6.Controls.Add(label1);
-            panel6.Controls.Add(dataGridView1);
-            panel6.Location = new Point(12, 306);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(1002, 389);
-            panel6.TabIndex = 4;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(30, 82);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(929, 268);
-            dataGridView1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(326, 29);
-            label1.Name = "label1";
-            label1.Size = new Size(205, 28);
-            label1.TabIndex = 1;
-            label1.Text = "All Today's Cutmoter ";
-            label1.Click += label1_Click;
-            // 
-            // AdminDashboard
+            // AdminDashborad
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1026, 707);
             Controls.Add(panel6);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "AdminDashboard";
-            Text = "Dashboard";
-            panel1.ResumeLayout(false);
+            Name = "AdminDashborad";
+            Size = new Size(1026, 707);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
-        private Panel panel4;
-        private Panel panel5;
-        private Panel panel3;
-        private Panel panel2;
-        private Panel panel6;
-        private PictureBox pictureBox1;
         private DataGridView dataGridView1;
-        private PictureBox pictureBox2;
-        private Label label3;
-        private Label label2;
+        private Panel panel4;
         private Label label6;
         private Label label7;
         private PictureBox pictureBox4;
+        private Panel panel6;
+        private Label label1;
+        private Label label2;
+        private PictureBox pictureBox1;
+        private Panel panel5;
         private Label label4;
         private Label label5;
         private PictureBox pictureBox3;
+        private Label label3;
         private Label label9;
         private Label label8;
-        private Label label1;
+        private PictureBox pictureBox2;
+        private Panel panel3;
+        private Panel panel2;
+        private Panel panel1;
     }
 }

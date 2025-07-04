@@ -24,9 +24,9 @@ namespace InventoryManagementSystem
 
         private void close_Click(object sender, EventArgs e)
         {
-           
-                Application.Exit();
-            
+
+            Application.Exit();
+
         }
 
         private void logoutbtn_Click(object sender, EventArgs e)
@@ -69,6 +69,21 @@ namespace InventoryManagementSystem
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void adminAddUser1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminAddUser1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminAddUser2_Load(object sender, EventArgs e)
         {
 
         }

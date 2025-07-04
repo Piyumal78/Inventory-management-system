@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InventoryManagementSystem
 {
-    public partial class AdminDashborad : UserControl
+    public partial class AdminAddCategories : UserControl
     {
-        public AdminDashborad()
+        public AdminAddCategories()
         {
             InitializeComponent();
         }
