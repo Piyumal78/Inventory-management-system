@@ -16,5 +16,10 @@ namespace InventoryManagementSystem
         {
             InitializeComponent();
         }
+
+        private void AdminDashborad_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -103,3 +103,5 @@ D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManage
 D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0-windows\InventoryManagementSystem.AdminAddUsers.resources
 D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0-windows\InventoryManagementSystem.AdminAddUser.resources
 D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0-windows\InventoryManagementSystem.AdminDashborad.resources
+D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0-windows\InventoryManagementSystem.AdminAddCategories.resources
+D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0-windows\InventoryManagementSystem.AdminAddProducts.resources

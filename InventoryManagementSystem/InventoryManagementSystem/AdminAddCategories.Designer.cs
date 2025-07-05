@@ -30,11 +30,11 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel1 = new Panel();
-            addUsers_clearBtn = new Button();
-            addUsers_removeBtn = new Button();
-            addUsers_updateBtn = new Button();
-            addUsers_addBtn = new Button();
-            addUsers_username = new TextBox();
+            addCategories_clearBtn = new Button();
+            addCategories_removeBtn = new Button();
+            addCategories_updateBtn = new Button();
+            addCategories_addBtn = new Button();
+            addCategories_category = new TextBox();
             label1 = new Label();
             panel2 = new Panel();
             dataGridView1 = new DataGridView();
@@ -47,11 +47,11 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(128, 128, 255);
-            panel1.Controls.Add(addUsers_clearBtn);
-            panel1.Controls.Add(addUsers_removeBtn);
-            panel1.Controls.Add(addUsers_updateBtn);
-            panel1.Controls.Add(addUsers_addBtn);
-            panel1.Controls.Add(addUsers_username);
+            panel1.Controls.Add(addCategories_clearBtn);
+            panel1.Controls.Add(addCategories_removeBtn);
+            panel1.Controls.Add(addCategories_updateBtn);
+            panel1.Controls.Add(addCategories_addBtn);
+            panel1.Controls.Add(addCategories_category);
             panel1.Controls.Add(label1);
             panel1.ForeColor = Color.White;
             panel1.Location = new Point(23, 27);
@@ -59,68 +59,72 @@
             panel1.Size = new Size(325, 653);
             panel1.TabIndex = 2;
             // 
-            // addUsers_clearBtn
+            // addCategories_clearBtn
             // 
-            addUsers_clearBtn.BackColor = Color.FromArgb(0, 0, 192);
-            addUsers_clearBtn.FlatAppearance.CheckedBackColor = Color.Blue;
-            addUsers_clearBtn.FlatAppearance.MouseDownBackColor = Color.Blue;
-            addUsers_clearBtn.FlatAppearance.MouseOverBackColor = Color.Blue;
-            addUsers_clearBtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            addUsers_clearBtn.Location = new Point(163, 198);
-            addUsers_clearBtn.Name = "addUsers_clearBtn";
-            addUsers_clearBtn.Size = new Size(99, 37);
-            addUsers_clearBtn.TabIndex = 11;
-            addUsers_clearBtn.Text = "Clear";
-            addUsers_clearBtn.UseVisualStyleBackColor = false;
+            addCategories_clearBtn.BackColor = Color.FromArgb(0, 0, 192);
+            addCategories_clearBtn.FlatAppearance.CheckedBackColor = Color.Blue;
+            addCategories_clearBtn.FlatAppearance.MouseDownBackColor = Color.Blue;
+            addCategories_clearBtn.FlatAppearance.MouseOverBackColor = Color.Blue;
+            addCategories_clearBtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            addCategories_clearBtn.Location = new Point(163, 198);
+            addCategories_clearBtn.Name = "addCategories_clearBtn";
+            addCategories_clearBtn.Size = new Size(99, 37);
+            addCategories_clearBtn.TabIndex = 11;
+            addCategories_clearBtn.Text = "Clear";
+            addCategories_clearBtn.UseVisualStyleBackColor = false;
+            addCategories_clearBtn.Click += addCategories_clearBtn_Click;
             // 
-            // addUsers_removeBtn
+            // addCategories_removeBtn
             // 
-            addUsers_removeBtn.BackColor = Color.FromArgb(0, 0, 192);
-            addUsers_removeBtn.FlatAppearance.CheckedBackColor = Color.Blue;
-            addUsers_removeBtn.FlatAppearance.MouseDownBackColor = Color.Blue;
-            addUsers_removeBtn.FlatAppearance.MouseOverBackColor = Color.Blue;
-            addUsers_removeBtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            addUsers_removeBtn.Location = new Point(40, 198);
-            addUsers_removeBtn.Name = "addUsers_removeBtn";
-            addUsers_removeBtn.Size = new Size(99, 37);
-            addUsers_removeBtn.TabIndex = 10;
-            addUsers_removeBtn.Text = "Remove";
-            addUsers_removeBtn.UseVisualStyleBackColor = false;
+            addCategories_removeBtn.BackColor = Color.FromArgb(0, 0, 192);
+            addCategories_removeBtn.FlatAppearance.CheckedBackColor = Color.Blue;
+            addCategories_removeBtn.FlatAppearance.MouseDownBackColor = Color.Blue;
+            addCategories_removeBtn.FlatAppearance.MouseOverBackColor = Color.Blue;
+            addCategories_removeBtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            addCategories_removeBtn.Location = new Point(40, 198);
+            addCategories_removeBtn.Name = "addCategories_removeBtn";
+            addCategories_removeBtn.Size = new Size(99, 37);
+            addCategories_removeBtn.TabIndex = 10;
+            addCategories_removeBtn.Text = "Remove";
+            addCategories_removeBtn.UseVisualStyleBackColor = false;
+            addCategories_removeBtn.Click += addCategories_removeBtn_Click;
             // 
-            // addUsers_updateBtn
+            // addCategories_updateBtn
             // 
-            addUsers_updateBtn.BackColor = Color.FromArgb(0, 0, 192);
-            addUsers_updateBtn.FlatAppearance.CheckedBackColor = Color.Blue;
-            addUsers_updateBtn.FlatAppearance.MouseDownBackColor = Color.Blue;
-            addUsers_updateBtn.FlatAppearance.MouseOverBackColor = Color.Blue;
-            addUsers_updateBtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            addUsers_updateBtn.Location = new Point(163, 140);
-            addUsers_updateBtn.Name = "addUsers_updateBtn";
-            addUsers_updateBtn.Size = new Size(99, 37);
-            addUsers_updateBtn.TabIndex = 9;
-            addUsers_updateBtn.Text = "Update";
-            addUsers_updateBtn.UseVisualStyleBackColor = false;
+            addCategories_updateBtn.BackColor = Color.FromArgb(0, 0, 192);
+            addCategories_updateBtn.FlatAppearance.CheckedBackColor = Color.Blue;
+            addCategories_updateBtn.FlatAppearance.MouseDownBackColor = Color.Blue;
+            addCategories_updateBtn.FlatAppearance.MouseOverBackColor = Color.Blue;
+            addCategories_updateBtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            addCategories_updateBtn.Location = new Point(163, 140);
+            addCategories_updateBtn.Name = "addCategories_updateBtn";
+            addCategories_updateBtn.Size = new Size(99, 37);
+            addCategories_updateBtn.TabIndex = 9;
+            addCategories_updateBtn.Text = "Update";
+            addCategories_updateBtn.UseVisualStyleBackColor = false;
+            addCategories_updateBtn.Click += addCategories_updateBtn_Click;
             // 
-            // addUsers_addBtn
+            // addCategories_addBtn
             // 
-            addUsers_addBtn.BackColor = Color.FromArgb(0, 0, 192);
-            addUsers_addBtn.FlatAppearance.CheckedBackColor = Color.Blue;
-            addUsers_addBtn.FlatAppearance.MouseDownBackColor = Color.Blue;
-            addUsers_addBtn.FlatAppearance.MouseOverBackColor = Color.Blue;
-            addUsers_addBtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            addUsers_addBtn.Location = new Point(40, 140);
-            addUsers_addBtn.Name = "addUsers_addBtn";
-            addUsers_addBtn.Size = new Size(99, 37);
-            addUsers_addBtn.TabIndex = 8;
-            addUsers_addBtn.Text = "Add";
-            addUsers_addBtn.UseVisualStyleBackColor = false;
+            addCategories_addBtn.BackColor = Color.FromArgb(0, 0, 192);
+            addCategories_addBtn.FlatAppearance.CheckedBackColor = Color.Blue;
+            addCategories_addBtn.FlatAppearance.MouseDownBackColor = Color.Blue;
+            addCategories_addBtn.FlatAppearance.MouseOverBackColor = Color.Blue;
+            addCategories_addBtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            addCategories_addBtn.Location = new Point(40, 140);
+            addCategories_addBtn.Name = "addCategories_addBtn";
+            addCategories_addBtn.Size = new Size(99, 37);
+            addCategories_addBtn.TabIndex = 8;
+            addCategories_addBtn.Text = "Add";
+            addCategories_addBtn.UseVisualStyleBackColor = false;
+            addCategories_addBtn.Click += addCategories_addBtn_Click;
             // 
-            // addUsers_username
+            // addCategories_category
             // 
-            addUsers_username.Location = new Point(28, 75);
-            addUsers_username.Name = "addUsers_username";
-            addUsers_username.Size = new Size(269, 27);
-            addUsers_username.TabIndex = 1;
+            addCategories_category.Location = new Point(28, 75);
+            addCategories_category.Name = "addCategories_category";
+            addCategories_category.Size = new Size(269, 27);
+            addCategories_category.TabIndex = 1;
             // 
             // label1
             // 
@@ -161,6 +165,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(605, 560);
             dataGridView1.TabIndex = 2;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label5
             // 
@@ -180,6 +185,7 @@
             Controls.Add(panel2);
             Name = "AdminAddCategories";
             Size = new Size(1026, 707);
+            Load += AdminAddCategories_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -191,11 +197,11 @@
         #endregion
 
         private Panel panel1;
-        private Button addUsers_clearBtn;
-        private Button addUsers_removeBtn;
-        private Button addUsers_updateBtn;
-        private Button addUsers_addBtn;
-        private TextBox addUsers_username;
+        private Button addCategories_clearBtn;
+        private Button addCategories_removeBtn;
+        private Button addCategories_updateBtn;
+        private Button addCategories_addBtn;
+        private TextBox addCategories_category;
         private Label label1;
         private Panel panel2;
         private DataGridView dataGridView1;

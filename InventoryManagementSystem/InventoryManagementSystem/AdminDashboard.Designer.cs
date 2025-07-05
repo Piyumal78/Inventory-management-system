@@ -276,6 +276,7 @@
             Controls.Add(panel1);
             Name = "AdminDashborad";
             Size = new Size(1026, 707);
+            Load += AdminDashborad_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();

@@ -1,269 +1,226 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace InventoryManagementSystem
 {
     public partial class AdminAddUser : UserControl
     {
+        private SqlConnection connect = new SqlConnection(@"Data Source=PIYUMAL\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False");
+        private int selectedUserId = 0;
+
         public AdminAddUser()
         {
             InitializeComponent();
             displayAllUsersData();
         }
 
-        SqlConnection connect = new SqlConnection(@"Data Source=PIYUMAL\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False");
-
         public void displayAllUsersData()
         {
-            UserData uData = new UserData();
-            List<UserData> listData = uData.AllUsersData();
-            dataGridView1.DataSource = listData;
+            try
+            {
+                UserData uData = new UserData();
+                dataGridView1.DataSource = uData.AllUsersData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading user data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void addUsers_addBtn_Click(object sender, EventArgs e)
         {
-            if (addUsers_username.Text == "" || addUsers_password.Text == "" || addUsers_role.SelectedIndex == -1
-                || addUsers_status.SelectedIndex == -1)
+            if (string.IsNullOrWhiteSpace(addUsers_username.Text) ||
+                string.IsNullOrWhiteSpace(addUsers_password.Text) ||
+                addUsers_role.SelectedIndex == -1 ||
+                addUsers_status.SelectedIndex == -1)
             {
-                MessageBox.Show("Please fill all empty fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please fill all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
-            {
-                if (checkconnection())
-                {
-                    try
-                    {
-                        connect.Open();
-                        string checkUsername = "SELECT * FROM users WHERE username=@usern";
-                        using (SqlCommand cmd = new SqlCommand(checkUsername, connect))
-                        {
-                            cmd.Parameters.AddWithValue("@usern", addUsers_username.Text.Trim());
-                            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                            DataTable table = new DataTable();
-                            adapter.Fill(table);
-                            if (table.Rows.Count > 0)
-                            {
-                                MessageBox.Show(addUsers_username.Text.Trim() + " is already taken", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            else if (addUsers_password.Text.Length < 8)
-                            {
-                                MessageBox.Show("Invalid Password, at least 8 characters are needed", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            else
-                            {
-                                string insertData = "INSERT INTO users(username,password,role,status,date)" +
-                                    "VALUES(@usern,@pass,@role,@status,@date)";
-                                using (SqlCommand insertCmd = new SqlCommand(insertData, connect))
-                                {
-                                    insertCmd.Parameters.AddWithValue("@usern", addUsers_username.Text.Trim());
-                                    insertCmd.Parameters.AddWithValue("@pass", addUsers_password.Text.Trim());
-                                    insertCmd.Parameters.AddWithValue("@role", addUsers_role.SelectedItem.ToString());
-                                    insertCmd.Parameters.AddWithValue("@status", addUsers_status.SelectedItem.ToString());
-                                    insertCmd.Parameters.AddWithValue("@date", DateTime.Now);
 
-                                    int rowsAffected = insertCmd.ExecuteNonQuery();
-                                    if (rowsAffected > 0)
-                                    {
-                                        MessageBox.Show("User added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                        clearFields();
-                                        displayAllUsersData();
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Failed to add user.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    catch (Exception ex)
+            if (addUsers_password.Text.Length < 8)
+            {
+                MessageBox.Show("Password must be at least 8 characters", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                connect.Open();
+
+                // Check if username exists
+                string checkUser = "SELECT COUNT(*) FROM users WHERE username = @username";
+                using (SqlCommand cmd = new SqlCommand(checkUser, connect))
+                {
+                    cmd.Parameters.AddWithValue("@username", addUsers_username.Text.Trim());
+                    int userCount = (int)cmd.ExecuteScalar();
+
+                    if (userCount > 0)
                     {
-                        MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Username already exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
-                    finally
+                }
+
+                // Insert new user
+                string insertSql = @"INSERT INTO users (username, password, role, status, date) 
+                                   VALUES (@username, @password, @role, @status, @date)";
+
+                using (SqlCommand cmd = new SqlCommand(insertSql, connect))
+                {
+                    cmd.Parameters.AddWithValue("@username", addUsers_username.Text.Trim());
+                    cmd.Parameters.AddWithValue("@password", addUsers_password.Text.Trim());
+                    cmd.Parameters.AddWithValue("@role", addUsers_role.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@status", addUsers_status.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@date", DateTime.Now);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
                     {
-                        connect.Close();
+                        MessageBox.Show("User added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                        displayAllUsersData();
                     }
                 }
             }
-        }
-
-        public bool checkconnection()
-        {
-            if (connect.State == ConnectionState.Closed)
+            catch (Exception ex)
             {
-                connect.Open();
-                return true;
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
+            finally
             {
-                return false;
+                if (connect.State == ConnectionState.Open)
+                    connect.Close();
             }
         }
 
-        private void AdminAddUser_Load(object sender, EventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Optional initialization code can go here
-        }
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
-        public void clearFields()
-        {
-            addUsers_username.Text = "";
-            addUsers_password.Text = "";
-            addUsers_role.SelectedIndex = -1;
-            addUsers_status.SelectedIndex = -1;
-            getID = 0;
+                selectedUserId = Convert.ToInt32(row.Cells["ID"].Value);
+                addUsers_username.Text = row.Cells["Username"].Value.ToString();
+                addUsers_password.Text = row.Cells["Password"].Value.ToString();
+                addUsers_role.SelectedItem = row.Cells["Role"].Value.ToString();
+                addUsers_status.SelectedItem = row.Cells["Status"].Value.ToString();
+            }
         }
 
         private void addUsers_updateBtn_Click(object sender, EventArgs e)
         {
-            if (getID == 0)
+            if (selectedUserId == 0)
             {
-                MessageBox.Show("Please select a user to update", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a user to update", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (addUsers_username.Text == "" || addUsers_password.Text == "" || addUsers_role.SelectedIndex == -1
-                  || addUsers_status.SelectedIndex == -1)
+            try
             {
-                MessageBox.Show("Please fill all empty fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                if (MessageBox.Show("Are you sure you want to update this user?", "Confirmation",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                connect.Open();
+
+                // Check if username exists (excluding current user)
+                string checkUser = "SELECT COUNT(*) FROM users WHERE username = @username AND id != @id";
+                using (SqlCommand cmd = new SqlCommand(checkUser, connect))
                 {
-                    if (checkconnection())
+                    cmd.Parameters.AddWithValue("@username", addUsers_username.Text.Trim());
+                    cmd.Parameters.AddWithValue("@id", selectedUserId);
+
+                    int userCount = (int)cmd.ExecuteScalar();
+                    if (userCount > 0)
                     {
-                        try
-                        {
-                            connect.Open();
-                            string checkUsername = "SELECT * FROM users WHERE username=@usern AND id != @id";
-                            using (SqlCommand cmd = new SqlCommand(checkUsername, connect))
-                            {
-                                cmd.Parameters.AddWithValue("@usern", addUsers_username.Text.Trim());
-                                cmd.Parameters.AddWithValue("@id", getID);
-                                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                                DataTable table = new DataTable();
-                                adapter.Fill(table);
+                        MessageBox.Show("Username already exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
 
-                                if (table.Rows.Count > 0)
-                                {
-                                    MessageBox.Show(addUsers_username.Text.Trim() + " is already taken", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                                else if (addUsers_password.Text.Length < 8)
-                                {
-                                    MessageBox.Show("Invalid Password, at least 8 characters are needed", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                                else
-                                {
-                                    string updateData = "UPDATE users SET username=@usern, " +
-                                        "password=@pass, role=@role, status=@status, date=@date WHERE id=@id";
+                // Update user
+                string updateSql = @"UPDATE users SET username = @username, password = @password, 
+                                   role = @role, status = @status, date = @date 
+                                   WHERE id = @id";
 
-                                    using (SqlCommand updateCmd = new SqlCommand(updateData, connect))
-                                    {
-                                        updateCmd.Parameters.AddWithValue("@usern", addUsers_username.Text.Trim());
-                                        updateCmd.Parameters.AddWithValue("@pass", addUsers_password.Text.Trim());
-                                        updateCmd.Parameters.AddWithValue("@role", addUsers_role.SelectedItem.ToString());
-                                        updateCmd.Parameters.AddWithValue("@status", addUsers_status.SelectedItem.ToString());
-                                        updateCmd.Parameters.AddWithValue("@date", DateTime.Now);
-                                        updateCmd.Parameters.AddWithValue("@id", getID);
+                using (SqlCommand cmd = new SqlCommand(updateSql, connect))
+                {
+                    cmd.Parameters.AddWithValue("@username", addUsers_username.Text.Trim());
+                    cmd.Parameters.AddWithValue("@password", addUsers_password.Text.Trim());
+                    cmd.Parameters.AddWithValue("@role", addUsers_role.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@status", addUsers_status.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@date", DateTime.Now);
+                    cmd.Parameters.AddWithValue("@id", selectedUserId);
 
-                                        int rowsAffected = updateCmd.ExecuteNonQuery();
-                                        if (rowsAffected > 0)
-                                        {
-                                            MessageBox.Show("User updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                            clearFields();
-                                            displayAllUsersData();
-                                        }
-                                        else
-                                        {
-                                            MessageBox.Show("Failed to update user.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        finally
-                        {
-                            connect.Close();
-                        }
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("User updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                        displayAllUsersData();
                     }
                 }
             }
-        }
-
-        private int getID = 0;
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex != -1)
+            catch (Exception ex)
             {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-
-                getID = Convert.ToInt32(row.Cells[0].Value);
-                addUsers_username.Text = row.Cells[1].Value.ToString();
-                addUsers_password.Text = row.Cells[2].Value.ToString();
-                addUsers_role.SelectedItem = row.Cells[3].Value.ToString();
-                addUsers_status.SelectedItem = row.Cells[4].Value.ToString();
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (connect.State == ConnectionState.Open)
+                    connect.Close();
             }
         }
 
         private void addUsers_removeBtn_Click(object sender, EventArgs e)
         {
-            if (getID == 0)
+            if (selectedUserId == 0)
             {
-                MessageBox.Show("Please select a user to delete", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a user to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (MessageBox.Show("Are you sure you want to delete this user?", "Confirmation",
+            if (MessageBox.Show("Are you sure you want to delete this user?", "Confirm",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (checkconnection())
+                try
                 {
-                    try
+                    connect.Open();
+
+                    string deleteSql = "DELETE FROM users WHERE id = @id";
+                    using (SqlCommand cmd = new SqlCommand(deleteSql, connect))
                     {
-                        connect.Open();
-                        string deleteData = "DELETE FROM users WHERE id=@id";
-                        using (SqlCommand cmd = new SqlCommand(deleteData, connect))
+                        cmd.Parameters.AddWithValue("@id", selectedUserId);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
                         {
-                            cmd.Parameters.AddWithValue("@id", getID);
-                            int rowsAffected = cmd.ExecuteNonQuery();
-                            if (rowsAffected > 0)
-                            {
-                                MessageBox.Show("User deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                clearFields();
-                                displayAllUsersData();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Failed to delete user.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
+                            MessageBox.Show("User deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clearFields();
+                            displayAllUsersData();
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    finally
-                    {
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    if (connect.State == ConnectionState.Open)
                         connect.Close();
-                    }
                 }
             }
+        }
+
+        private void clearFields()
+        {
+            selectedUserId = 0;
+            addUsers_username.Clear();
+            addUsers_password.Clear();
+            addUsers_role.SelectedIndex = -1;
+            addUsers_status.SelectedIndex = -1;
         }
 
         private void addUsers_clearBtn_Click(object sender, EventArgs e)

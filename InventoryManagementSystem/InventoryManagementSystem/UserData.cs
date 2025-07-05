@@ -8,11 +8,11 @@ namespace InventoryManagementSystem
     internal class UserData
     {
         public int ID { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string Role { get; set; }
-        public string Status { get; set; }
-        public string Date { get; set; }  // Can also use DateTime if DB column is datetime
+        public string? Username { get; set; }
+        public string? Password { get; set; }
+        public string? Role { get; set; }
+        public string? Status { get; set; }
+        public DateTime? Date { get; set; }
 
         public List<UserData> AllUsersData()
         {
@@ -26,21 +26,23 @@ namespace InventoryManagementSystem
 
                 using (SqlCommand cmd = new SqlCommand(selectData, connection))
                 {
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        UserData uData = new UserData
+                        while (reader.Read())
                         {
-                            ID = Convert.ToInt32(reader["id"]),
-                            Username = reader["username"].ToString(),
-                            Password = reader["password"].ToString(),
-                            Role = reader["role"].ToString(),
-                            Status = reader["status"].ToString(),
-                            Date = reader["date"].ToString()
-                        };
+                            UserData uData = new UserData
+                            {
+                                ID = Convert.ToInt32(reader["id"]),
+                                Username = reader["username"] == DBNull.Value ? string.Empty : reader["username"].ToString(),
+                                Password = reader["password"] == DBNull.Value ? string.Empty : reader["password"].ToString(),
+                                Role = reader["role"] == DBNull.Value ? string.Empty : reader["role"].ToString(),
+                                Status = reader["status"] == DBNull.Value ? string.Empty : reader["status"].ToString(),
+                                Date = reader["date"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(reader["date"])
+                            };
 
-                        listData.Add(uData);
+
+                            listData.Add(uData);
+                        }
                     }
                 }
             }

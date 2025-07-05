@@ -47,9 +47,11 @@
             label2 = new Label();
             pictureBox1 = new PictureBox();
             panel3 = new Panel();
-            adminDashborad1 = new AdminDashborad();
-            adminAddUser1 = new AdminAddUser();
+            adminAddCategories1 = new AdminAddCategories();
             adminAddUser2 = new AdminAddUser();
+            adminAddUser1 = new AdminAddUser();
+            adminDashborad1 = new AdminDashborad();
+            adminAddProducts1 = new AdminAddProducts();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -307,14 +309,39 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(adminAddProducts1);
+            panel3.Controls.Add(adminAddCategories1);
             panel3.Controls.Add(adminAddUser2);
             panel3.Controls.Add(adminAddUser1);
             panel3.Controls.Add(adminDashborad1);
             panel3.Dock = DockStyle.Fill;
+            panel3.ForeColor = Color.Black;
             panel3.Location = new Point(283, 86);
             panel3.Name = "panel3";
             panel3.Size = new Size(1026, 709);
             panel3.TabIndex = 2;
+            // 
+            // adminAddCategories1
+            // 
+            adminAddCategories1.Location = new Point(0, 0);
+            adminAddCategories1.Name = "adminAddCategories1";
+            adminAddCategories1.Size = new Size(1282, 884);
+            adminAddCategories1.TabIndex = 3;
+            // 
+            // adminAddUser2
+            // 
+            adminAddUser2.Location = new Point(258, 231);
+            adminAddUser2.Name = "adminAddUser2";
+            adminAddUser2.Size = new Size(1282, 884);
+            adminAddUser2.TabIndex = 2;
+            // 
+            // adminAddUser1
+            // 
+            adminAddUser1.Location = new Point(0, -4);
+            adminAddUser1.Name = "adminAddUser1";
+            adminAddUser1.Size = new Size(1036, 713);
+            adminAddUser1.TabIndex = 1;
+            adminAddUser1.Load += adminAddUser1_Load_1;
             // 
             // adminDashborad1
             // 
@@ -323,20 +350,12 @@
             adminDashborad1.Size = new Size(1023, 701);
             adminDashborad1.TabIndex = 0;
             // 
-            // adminAddUser1
+            // adminAddProducts1
             // 
-            adminAddUser1.Location = new Point(0, 0);
-            adminAddUser1.Name = "adminAddUser1";
-            adminAddUser1.Size = new Size(1036, 713);
-            adminAddUser1.TabIndex = 1;
-            adminAddUser1.Load += adminAddUser1_Load_1;
-            // 
-            // adminAddUser2
-            // 
-            adminAddUser2.Location = new Point(0, 0);
-            adminAddUser2.Name = "adminAddUser2";
-            adminAddUser2.Size = new Size(1282, 884);
-            adminAddUser2.TabIndex = 2;
+            adminAddProducts1.Location = new Point(0, 0);
+            adminAddProducts1.Name = "adminAddProducts1";
+            adminAddProducts1.Size = new Size(1282, 884);
+            adminAddProducts1.TabIndex = 4;
             // 
             // MainForm
             // 
@@ -385,5 +404,7 @@
         private AdminDashborad adminDashborad1;
         private AdminAddUser adminAddUser2;
         private AdminAddUser adminAddUser1;
+        private AdminAddCategories adminAddCategories1;
+        private AdminAddProducts adminAddProducts1;
     }
 }
