@@ -1,6 +1,6 @@
 ﻿namespace InventoryManagementSystem
 {
-    partial class MainForm
+    partial class CashierMainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,24 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierMainForm));
             panel1 = new Panel();
             label1 = new Label();
             close = new Button();
             panel2 = new Panel();
-            logoutbtn = new Button();
+            logout_btn = new Button();
             button10 = new Button();
             button11 = new Button();
             button12 = new Button();
             button5 = new Button();
             button7 = new Button();
-            button8 = new Button();
-            button6 = new Button();
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
             label2 = new Label();
             pictureBox1 = new PictureBox();
+            Order = new Button();
             panel3 = new Panel();
             adminDashborad1 = new AdminDashborad();
             panel1.SuspendLayout();
@@ -62,9 +61,8 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1309, 86);
-            panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            panel1.Size = new Size(1355, 86);
+            panel1.TabIndex = 3;
             // 
             // label1
             // 
@@ -73,9 +71,10 @@
             label1.ForeColor = Color.Black;
             label1.Location = new Point(39, 21);
             label1.Name = "label1";
-            label1.Size = new Size(460, 28);
+            label1.Size = new Size(468, 28);
             label1.TabIndex = 3;
-            label1.Text = "Inventory Management System |Admin's Portal";
+            label1.Text = "Inventory Management System |Cashier's Portal";
+            label1.Click += label1_Click;
             // 
             // close
             // 
@@ -93,19 +92,17 @@
             close.Text = "x";
             close.TextAlign = ContentAlignment.TopCenter;
             close.UseVisualStyleBackColor = false;
-            close.Click += close_Click;
             // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(134, 182, 246);
-            panel2.Controls.Add(logoutbtn);
+            panel2.Controls.Add(logout_btn);
             panel2.Controls.Add(button10);
+            panel2.Controls.Add(Order);
             panel2.Controls.Add(button11);
             panel2.Controls.Add(button12);
             panel2.Controls.Add(button5);
             panel2.Controls.Add(button7);
-            panel2.Controls.Add(button8);
-            panel2.Controls.Add(button6);
             panel2.Controls.Add(button4);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
@@ -114,25 +111,25 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 86);
             panel2.Name = "panel2";
-            panel2.Size = new Size(283, 709);
-            panel2.TabIndex = 1;
+            panel2.Size = new Size(283, 715);
+            panel2.TabIndex = 4;
             // 
-            // logoutbtn
+            // logout_btn
             // 
-            logoutbtn.BackColor = Color.FromArgb(128, 128, 255);
-            logoutbtn.FlatAppearance.BorderSize = 0;
-            logoutbtn.FlatAppearance.MouseDownBackColor = Color.MediumBlue;
-            logoutbtn.FlatAppearance.MouseOverBackColor = Color.CornflowerBlue;
-            logoutbtn.FlatStyle = FlatStyle.Flat;
-            logoutbtn.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            logoutbtn.ForeColor = Color.FromArgb(0, 0, 192);
-            logoutbtn.Location = new Point(12, 658);
-            logoutbtn.Name = "logoutbtn";
-            logoutbtn.Size = new Size(248, 37);
-            logoutbtn.TabIndex = 18;
-            logoutbtn.Text = "Logout";
-            logoutbtn.UseVisualStyleBackColor = false;
-            logoutbtn.Click += logoutbtn_Click;
+            logout_btn.BackColor = Color.FromArgb(128, 128, 255);
+            logout_btn.FlatAppearance.BorderSize = 0;
+            logout_btn.FlatAppearance.MouseDownBackColor = Color.MediumBlue;
+            logout_btn.FlatAppearance.MouseOverBackColor = Color.CornflowerBlue;
+            logout_btn.FlatStyle = FlatStyle.Flat;
+            logout_btn.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            logout_btn.ForeColor = Color.FromArgb(0, 0, 192);
+            logout_btn.Location = new Point(12, 658);
+            logout_btn.Name = "logout_btn";
+            logout_btn.Size = new Size(248, 37);
+            logout_btn.TabIndex = 18;
+            logout_btn.Text = "Logout";
+            logout_btn.UseVisualStyleBackColor = false;
+            logout_btn.Click += logout_btn_Click;
             // 
             // button10
             // 
@@ -156,7 +153,7 @@
             button11.FlatStyle = FlatStyle.Flat;
             button11.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
             button11.ForeColor = Color.Blue;
-            button11.Location = new Point(12, 412);
+            button11.Location = new Point(12, 310);
             button11.Name = "button11";
             button11.Size = new Size(248, 55);
             button11.TabIndex = 16;
@@ -185,7 +182,7 @@
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
             button5.ForeColor = Color.Blue;
-            button5.Location = new Point(12, 353);
+            button5.Location = new Point(12, 241);
             button5.Name = "button5";
             button5.Size = new Size(248, 55);
             button5.TabIndex = 14;
@@ -205,36 +202,6 @@
             button7.Size = new Size(248, 55);
             button7.TabIndex = 13;
             button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatAppearance.MouseDownBackColor = Color.Blue;
-            button8.FlatAppearance.MouseOverBackColor = Color.Blue;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            button8.ForeColor = Color.Blue;
-            button8.Location = new Point(12, 292);
-            button8.Name = "button8";
-            button8.Size = new Size(248, 55);
-            button8.TabIndex = 12;
-            button8.Text = "Add Categories";
-            button8.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatAppearance.MouseDownBackColor = Color.Blue;
-            button6.FlatAppearance.MouseOverBackColor = Color.Blue;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            button6.ForeColor = Color.Blue;
-            button6.Location = new Point(12, 231);
-            button6.Name = "button6";
-            button6.Size = new Size(248, 55);
-            button6.TabIndex = 11;
-            button6.Text = "Add Users";
-            button6.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -278,7 +245,6 @@
             button2.TabIndex = 2;
             button2.Text = "Dashboard";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // label2
             // 
@@ -304,36 +270,50 @@
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
+            // Order
+            // 
+            Order.FlatAppearance.BorderSize = 0;
+            Order.FlatAppearance.MouseDownBackColor = Color.Blue;
+            Order.FlatAppearance.MouseOverBackColor = Color.Blue;
+            Order.FlatStyle = FlatStyle.Flat;
+            Order.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            Order.ForeColor = Color.Blue;
+            Order.Location = new Point(12, 372);
+            Order.Name = "Order";
+            Order.Size = new Size(248, 55);
+            Order.TabIndex = 16;
+            Order.Text = "Order";
+            Order.UseVisualStyleBackColor = true;
+            Order.Click += button1_Click;
+            // 
             // panel3
             // 
             panel3.Controls.Add(adminDashborad1);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(283, 86);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1026, 709);
-            panel3.TabIndex = 2;
+            panel3.Size = new Size(1072, 715);
+            panel3.TabIndex = 19;
             // 
             // adminDashborad1
             // 
             adminDashborad1.Location = new Point(0, 0);
             adminDashborad1.Name = "adminDashborad1";
-            adminDashborad1.Size = new Size(1023, 701);
+            adminDashborad1.Size = new Size(1282, 884);
             adminDashborad1.TabIndex = 0;
             // 
-            // MainForm
+            // CashierMainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1309, 795);
+            ClientSize = new Size(1355, 801);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            ForeColor = Color.White;
             FormBorderStyle = FormBorderStyle.None;
-            Name = "MainForm";
+            Name = "CashierMainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "MainForm";
-            Load += MainForm_Load;
+            Text = "Inventory Management System|Cashier's Portal";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -344,28 +324,23 @@
         }
 
         #endregion
-
         private Panel panel1;
-       
         private Label label1;
+        private Button close;
         private Panel panel2;
-        private PictureBox pictureBox1;
-        private Label label2;
-        private Button button2;
-        private Button button5;
-        private Button button7;
-        private Button button8;
-        private Button button6;
-        private Button button4;
-        private Button button3;
-        private Button logoutbtn;
+        private Button logout_btn;
         private Button button10;
         private Button button11;
         private Button button12;
-        private Button close;
+        private Button button5;
+        private Button button7;
+        private Button button4;
+        private Button button3;
+        private Button button2;
+        private Label label2;
+        private PictureBox pictureBox1;
+        private Button Order;
         private Panel panel3;
         private AdminDashborad adminDashborad1;
-        private AdminAddUser adminAddUser2;
-        private AdminAddUser adminAddUser1;
     }
 }
