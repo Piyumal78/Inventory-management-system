@@ -37,6 +37,7 @@ date_insert DATE NULL
     
 )
 
+<<<<<<< HEAD
 SELECT * FROM products;
 INSERT INTO categories (category) VALUES 
 ('Electronics'),
@@ -49,3 +50,12 @@ INSERT INTO categories (category) VALUES
 ('Toys'),
 ('Beauty Products'),
 ('Groceries');
+=======
+ CREATE TABLE categories(
+ id int PRIMARY KEY IDENTITY(1,1),
+ category VARCHAR(MAX) NULL,
+ date DATE NULL
+
+ )
+ SELECT * FROM categories;
+>>>>>>> e1394d15b6bf62968fdade6b695c0bf011329132
