@@ -16,6 +16,7 @@ INSERT INTO users(username, password, role, date, status) VALUES('admin', 'admin
  CREATE TABLE categories(
  id int PRIMARY KEY IDENTITY(1,1),
  category VARCHAR(MAX) NULL,
- created_at DATE NULL
+ date DATE NULL
 
  )
+ SELECT * FROM categories;
