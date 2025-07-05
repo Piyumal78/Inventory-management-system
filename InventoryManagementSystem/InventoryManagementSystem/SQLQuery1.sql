@@ -9,9 +9,13 @@
 	
 	
 )
+
+INSERT INTO users(username, password,role,status) VALUES('testing1', 'admin123'.'Cashier','Active');
 SELECT * FROM users;
 
-INSERT INTO users(username, password, role, date, status) VALUES('admin', 'admin123', 'Admin','Active','2023-10-01');
+DELETE FROM users WHERE id=9;
+
+INSERT INTO users(id,username, password, role, status, date) VALUES('1','admin', 'admin123', 'Admin','Active','2023-10-01');
 
  CREATE TABLE categories(
  id int PRIMARY KEY IDENTITY(1,1),

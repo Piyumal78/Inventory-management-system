@@ -48,8 +48,6 @@
             pictureBox1 = new PictureBox();
             panel3 = new Panel();
             adminDashborad1 = new AdminDashborad();
-            adminAddUser1 = new AdminAddUser();
-            adminAddUser2 = new AdminAddUser();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -280,6 +278,7 @@
             button2.TabIndex = 2;
             button2.Text = "Dashboard";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label2
             // 
@@ -307,8 +306,6 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(adminAddUser2);
-            panel3.Controls.Add(adminAddUser1);
             panel3.Controls.Add(adminDashborad1);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(283, 86);
@@ -322,21 +319,6 @@
             adminDashborad1.Name = "adminDashborad1";
             adminDashborad1.Size = new Size(1023, 701);
             adminDashborad1.TabIndex = 0;
-            // 
-            // adminAddUser1
-            // 
-            adminAddUser1.Location = new Point(0, 0);
-            adminAddUser1.Name = "adminAddUser1";
-            adminAddUser1.Size = new Size(1036, 713);
-            adminAddUser1.TabIndex = 1;
-            adminAddUser1.Load += adminAddUser1_Load_1;
-            // 
-            // adminAddUser2
-            // 
-            adminAddUser2.Location = new Point(0, 0);
-            adminAddUser2.Name = "adminAddUser2";
-            adminAddUser2.Size = new Size(1282, 884);
-            adminAddUser2.TabIndex = 2;
             // 
             // MainForm
             // 
