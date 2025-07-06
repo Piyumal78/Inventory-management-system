@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
+
 namespace InventoryManagementSystem
 {
     public partial class AdminAddProducts : UserControl
@@ -208,13 +210,14 @@ namespace InventoryManagementSystem
         }
         public void clearFields()
         {
-            addProducts_prodID.Clear();
-            addProducts_prodName.Clear();
-            addProducts_category.SelectedIndex = -1;   // Deselect category
-            addProducts_price.Clear();
-            addProducts_stock.Clear();
-            addProducts_status.SelectedIndex = -1;     // Deselect status
-            addProducts_imageView.Image = null;        // Remove image
+            addProducts_prodID.Text = "";
+            addProducts_prodName.Text = "";
+            addProducts_category.SelectedIndex = -1;
+            addProducts_price.Text = "";
+            addProducts_stock.Text = "";
+            addProducts_status.SelectedIndex = -1;
+            addProducts_imageView.Image = null;
+            getID = 0; // Reset the ID for new entries
         }
         private void addProducts_clearBtn_Click(object sender, EventArgs e)
         {
@@ -257,14 +260,14 @@ namespace InventoryManagementSystem
             if (checkEmtyFields())
             {
                 MessageBox.Show("Empty fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               
+
             }
             else
             {
                 if (MessageBox.Show("Are you sure you want to update Product ID: " + addProducts_prodID.Text.Trim() + "?",
-                     "Confirmation Message",
-                     MessageBoxButtons.YesNo,
-                     MessageBoxIcon.Question) == DialogResult.Yes)
+             "Confirmation Message",
+             MessageBoxButtons.YesNo,
+             MessageBoxIcon.Question) == DialogResult.Yes)
 
                 {
                     if (!checkConnection())
@@ -329,10 +332,11 @@ namespace InventoryManagementSystem
                                     displayAllProducts();
 
 
-                                    MessageBox.Show("Product updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Product updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                }
+
                             }
+                        }
                         
                         catch (Exception ex)
                         {
@@ -406,5 +410,6 @@ namespace InventoryManagementSystem
             }
 
         }
+
     }
 }

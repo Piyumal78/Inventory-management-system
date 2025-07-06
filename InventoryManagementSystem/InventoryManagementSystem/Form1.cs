@@ -45,6 +45,89 @@ namespace InventoryManagementSystem
                 return false;
             }
         }
+        //private void login_btn_Click(object sender, EventArgs e)
+        //{
+        //    if (login_username.Text == "" || login_password.Text == "")
+        //    {
+        //        MessageBox.Show("Please fill in both username and password.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //        return;
+        //    }
+
+        //    if (checkconnection())
+        //    {
+        //        try
+        //        {
+        //            connect.Open();
+        //            string checkUsername = "SELECT COUNT(*)  FROM users WHERE username=@usern AND password=@pass  ";
+        //            using (SqlCommand cmd = new SqlCommand(checkUsername, connect))
+        //            {
+        //                cmd.Parameters.AddWithValue("@usern", login_username.Text.Trim());
+        //                cmd.Parameters.AddWithValue("@pass", login_password.Text.Trim());
+        //                cmd.Parameters.AddWithValue("@status", "Active");
+
+        //                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+        //                DataTable table = new DataTable();
+        //                adapter.Fill(table);
+
+
+        //                int rowCount = (int)cmd.ExecuteScalar();
+        //                if (table.Rows.Count > 0)
+
+        //                {
+        //                    string seletRole = "SELECT role FROM users WHERE username=@usern AND password=@pass";
+
+        //                    MessageBox.Show("Login Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        //                    using (SqlCommand getRole = new SqlCommand(seletRole, connect))
+        //                    {
+        //                        {
+        //                            getRole.Parameters.AddWithValue("@usern", login_username.Text.Trim());
+        //                            getRole.Parameters.AddWithValue("@pass", login_password.Text.Trim());
+        //                            string userRole = getRole.ExecuteScalar() as string;
+
+        //                            MessageBox.Show("Welcome " + userRole, "Role Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        //                            if (userRole == "Admin")
+        //                            {
+        //                                MainForm mForm = new MainForm();
+        //                                // Redirect to the Admin Dashboard
+        //                                mForm.Show();
+        //                                this.Hide();
+        //                            }
+        //                            else if (userRole == "Cashier")
+        //                            {
+        //                                // Redirect to the Cashier Dashboard
+        //                                CashierMainForm cashierMainForm = new CashierMainForm();
+        //                                cashierMainForm.Show();
+        //                                this.Hide();
+        //                            }
+        //                        }
+        //                        // Redirect to the main application form
+        //                        MainForm mainForm = new MainForm();
+        //                        mainForm.Show();
+        //                        this.Hide();
+        //                    }
+        //                }
+
+
+        //                else
+        //                {
+        //                    MessageBox.Show("Invalid Username or Password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //                }
+
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        }
+        //        finally
+        //        {
+        //            connect.Close();
+        //        }
+        //    }
+        //}
+
         private void login_btn_Click(object sender, EventArgs e)
         {
             if (login_username.Text == "" || login_password.Text == "")
@@ -53,45 +136,59 @@ namespace InventoryManagementSystem
                 return;
             }
 
-            if (checkconnection())
+            try
             {
-                try
-                {
+                if (connect.State == ConnectionState.Closed)
                     connect.Open();
-                    string checkUsername = "SELECT * FROM users WHERE username=@usern AND password=@pass";
-                    using (SqlCommand cmd = new SqlCommand(checkUsername, connect))
+
+                string query = "SELECT role FROM users WHERE username = @usern AND password = @pass AND status = 'Active'";
+                using (SqlCommand cmd = new SqlCommand(query, connect))
+                {
+                    cmd.Parameters.AddWithValue("@usern", login_username.Text.Trim());
+                    cmd.Parameters.AddWithValue("@pass", login_password.Text.Trim());
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null)
                     {
-                        cmd.Parameters.AddWithValue("@usern", login_username.Text.Trim());
-                        cmd.Parameters.AddWithValue("@pass", login_password.Text.Trim());
+                        string userRole = result.ToString();
 
-                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                        DataTable table = new DataTable();
-                        adapter.Fill(table);
+                        MessageBox.Show("Login Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Welcome " + userRole, "Role Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        if (table.Rows.Count > 0)
+                        if (userRole == "Admin")
                         {
-                            MessageBox.Show("Login Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            // Redirect to the main application form
-                            MainForm mainForm = new MainForm();
-                            mainForm.Show();
+                            MainForm mForm = new MainForm();
+                            mForm.Show();
+                            this.Hide();
+                        }
+                        else if (userRole == "Cashier")
+                        {
+                            CashierMainForm cashierMainForm = new CashierMainForm();
+                            cashierMainForm.Show();
                             this.Hide();
                         }
                         else
                         {
-                            MessageBox.Show("Invalid Username or Password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Unknown user role: " + userRole, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    connect.Close();
+                    else
+                    {
+                        MessageBox.Show("Invalid Username or Password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connect.Close();
+            }
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {

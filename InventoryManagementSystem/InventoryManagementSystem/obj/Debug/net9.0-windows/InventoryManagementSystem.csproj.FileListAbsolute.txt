@@ -105,3 +105,6 @@ D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManage
 D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0-windows\InventoryManagementSystem.AdminDashborad.resources
 D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0-windows\InventoryManagementSystem.AdminAddCategories.resources
 D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0-windows\InventoryManagementSystem.AdminAddProducts.resources
+D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\bin\Debug\net9.0-windows\CashierOrder.resx
+D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0-windows\InventoryManagementSystem.CashierOrder.resources
+D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0-windows\InventoryManagementSystem.CashierMainForm.resources

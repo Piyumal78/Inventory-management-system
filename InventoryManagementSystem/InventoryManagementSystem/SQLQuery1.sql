@@ -10,7 +10,11 @@ CREATE TABLE users (
 
 -- Insert default admin user
 INSERT INTO users (username, password, role, status, date)
-VALUES ('admin', 'admin123', 'Admin', 'Active', '2023-10-01');
+VALUES 
+('admin', 'admin123', 'Admin', 'Active', '2023-10-01'),
+('test', 'admin123', 'Cashier', 'Active', '2023-10-02');
+
+
 
 -- Create categories table
 CREATE TABLE categories (
