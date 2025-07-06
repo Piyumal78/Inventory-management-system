@@ -23,7 +23,7 @@ namespace InventoryManagementSystem
             List<CategoriesData> listData = new List<CategoriesData>();
 
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=PIYUMAL\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True;"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Inventory;Integrated Security=True;"))
 
             {
                 connection.Open();

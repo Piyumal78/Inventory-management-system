@@ -302,7 +302,6 @@
             cashierOrder1.Name = "cashierOrder1";
             cashierOrder1.Size = new Size(1282, 884);
             cashierOrder1.TabIndex = 1;
-            
             // 
             // adminDashborad1
             // 

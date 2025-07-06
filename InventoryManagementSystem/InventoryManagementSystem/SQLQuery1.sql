@@ -9,10 +9,10 @@ CREATE TABLE users (
 );
 
 -- Insert default admin user
-INSERT INTO users (username, password, role, status, date)
+INSERT INTO users (id,username, password, role, status, date)
 VALUES 
-('admin', 'admin123', 'Admin', 'Active', '2023-10-01'),
-('test', 'admin123', 'Cashier', 'Active', '2023-10-02');
+('3','admin', 'admin123', 'Admin', 'Active', '2023-10-01'),
+('5','test', 'admin123', 'Cashier', 'Active', '2023-10-02');
 
 
 
@@ -41,7 +41,7 @@ date_insert DATE NULL
     
 )
 
-<<<<<<< HEAD
+ 
 SELECT * FROM products;
 INSERT INTO categories (category) VALUES 
 ('Electronics'),
@@ -54,7 +54,7 @@ INSERT INTO categories (category) VALUES
 ('Toys'),
 ('Beauty Products'),
 ('Groceries');
-=======
+
  CREATE TABLE categories(
  id int PRIMARY KEY IDENTITY(1,1),
  category VARCHAR(MAX) NULL,
@@ -62,4 +62,10 @@ INSERT INTO categories (category) VALUES
 
  )
  SELECT * FROM categories;
->>>>>>> e1394d15b6bf62968fdade6b695c0bf011329132
+
+
+
+INSERT INTO products (prod_id, prod_name, category, price, stock, image_path, status, date_insert) VALUES
+('P001', 'Wireless Mouse', 'Electronics', 1500.00, 25, 'images/products/P001.jpg', 'Available', '2025-07-01'),
+('P002', 'Bluetooth Headphones', 'Electronics', 4500.00, 15, 'images/products/P002.jpg', 'Available', '2025-07-02'),
+('P003', 'The Great Gatsby', 'Books', 1200.00, 40, 'images/products/P003.jpg', 'Available', '2025-07-03');
