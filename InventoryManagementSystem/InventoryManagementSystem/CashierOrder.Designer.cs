@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierOrder));
             panel1 = new Panel();
             label5 = new Label();
             cashierOrder_clearBtn = new Button();
@@ -57,6 +58,8 @@
             cashierOrder_change = new Label();
             cashierOrder_totalPrice = new Label();
             label11 = new Label();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
+            printPreviewDialog1 = new PrintPreviewDialog();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)cashierOrder_qty).BeginInit();
             panel2.SuspendLayout();
@@ -85,7 +88,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(675, 345);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            
             // 
             // label5
             // 
@@ -110,7 +113,7 @@
             cashierOrder_clearBtn.TabIndex = 11;
             cashierOrder_clearBtn.Text = " Clear";
             cashierOrder_clearBtn.UseVisualStyleBackColor = false;
-            // 
+             // 
             // cashierOrder_removeBtn
             // 
             cashierOrder_removeBtn.BackColor = Color.FromArgb(0, 0, 192);
@@ -190,9 +193,10 @@
             label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             label6.Location = new Point(51, 213);
             label6.Name = "label6";
-            label6.Size = new Size(103, 25);
+            label6.Size = new Size(96, 25);
             label6.TabIndex = 1;
-            label6.Text = "Proce($):";
+            label6.Text = "Price($):";
+            
             // 
             // label8
             // 
@@ -213,7 +217,7 @@
             cashierOrder_prodName.Size = new Size(107, 25);
             cashierOrder_prodName.TabIndex = 1;
             cashierOrder_prodName.Text = "Category:";
-            cashierOrder_prodName.Click += cashierOrder_prodName_Click;
+           
             // 
             // label4
             // 
@@ -303,6 +307,7 @@
             cashierOrder_receipt.TabIndex = 11;
             cashierOrder_receipt.Text = "Receipt";
             cashierOrder_receipt.UseVisualStyleBackColor = false;
+            
             // 
             // cashierOrder_payOrders
             // 
@@ -317,6 +322,7 @@
             cashierOrder_payOrders.TabIndex = 10;
             cashierOrder_payOrders.Text = "Pay Orders";
             cashierOrder_payOrders.UseVisualStyleBackColor = false;
+            
             // 
             // cashierOrder_amount
             // 
@@ -334,6 +340,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(333, 274);
             dataGridView1.TabIndex = 0;
+         
             // 
             // label13
             // 
@@ -354,8 +361,7 @@
             label9.Size = new Size(151, 25);
             label9.TabIndex = 1;
             label9.Text = "Total Price($):";
-            label9.Click += label9_Click;
-            // 
+            
             // cashierOrder_change
             // 
             cashierOrder_change.AutoSize = true;
@@ -385,6 +391,16 @@
             label11.Size = new Size(121, 25);
             label11.TabIndex = 1;
             label11.Text = "Amount($):";
+            // 
+            // printPreviewDialog1
+            // 
+            printPreviewDialog1.AutoScrollMargin = new Size(0, 0);
+            printPreviewDialog1.AutoScrollMinSize = new Size(0, 0);
+            printPreviewDialog1.ClientSize = new Size(400, 300);
+            printPreviewDialog1.Enabled = true;
+            printPreviewDialog1.Icon = (Icon)resources.GetObject("printPreviewDialog1.Icon");
+            printPreviewDialog1.Name = "printPreviewDialog1";
+            printPreviewDialog1.Visible = false;
             // 
             // CashierOrder
             // 
@@ -438,5 +454,7 @@
         private Button cashierOrder_receipt;
         private Button cashierOrder_payOrders;
         private Label label5;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private PrintPreviewDialog printPreviewDialog1;
     }
 }

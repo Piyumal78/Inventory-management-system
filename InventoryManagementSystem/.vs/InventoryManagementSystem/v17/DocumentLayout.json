@@ -1,58 +1,126 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\",
+  "WorkspaceRootPath": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|d:\\project\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\cashierorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\cashierorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\cashierorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|d:\\project\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\cashierorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\cashierorder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\cashierorder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\ordersdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\ordersdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\inventorymanagementsystem\\cashierorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\cashierorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|d:\\project\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\sqlquery3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\sqlquery3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\adminaddcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\adminaddcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|d:\\project\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\categoriesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\categoriesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|d:\\project\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\cashiermainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\cashiermainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|d:\\project\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
       "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|d:\\project\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\inventorymanagementsystem\\adminaddcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\adminaddcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\addproductsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\addproductsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\sqlquery3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\sqlquery3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|d:\\project\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\inventorymanagementsystem\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\inventorymanagementsystem\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\inventorymanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\inventorymanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|d:\\project\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\categoriesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\categoriesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|d:\\project\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame",
-      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\cashiermainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\cashiermainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|d:\\project\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\sqlquery3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\sqlquery3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\inventorymanagementsystem\\cashiermainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\cashiermainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|d:\\project\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\sqlquery3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame",
-      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\sqlquery3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\admindashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\admindashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\adminaddusers.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\adminaddusers.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\adminaddusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\adminaddusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\adminadduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\adminadduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\inventorymanagementsystem\\adminadduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\adminadduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\adminaddproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\adminaddproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\inventorymanagementsystem\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\inventorymanagementsystem\\adminaddusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\adminaddusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\heshan\\desktop\\inventory-management-system\\inventorymanagementsystem\\inventorymanagementsystem\\cashiermainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D56CA73-405A-41E7-B7AF-1F45154CC5D3}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\cashiermainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +130,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -73,24 +141,57 @@
               "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SQLQuery3.sql ",
-              "DocumentMoniker": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\SQLQuery3.sql",
-              "RelativeDocumentMoniker": "InventoryManagementSystem\\SQLQuery3.sql",
-              "ToolTip": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\SQLQuery3.sql",
-              "RelativeToolTip": "InventoryManagementSystem\\SQLQuery3.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-06T03:22:25.584Z",
+              "DocumentIndex": 4,
+              "Title": "AdminAddCategories.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminAddCategories.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\AdminAddCategories.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminAddCategories.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\AdminAddCategories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T10:03:28.418Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SQLQuery1.sql",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\SQLQuery1.sql",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\SQLQuery1.sql",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\SQLQuery1.sql",
+              "RelativeToolTip": "InventoryManagementSystem\\SQLQuery1.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-07-05T08:11:57.897Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CashierOrder.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierOrder.Designer.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\CashierOrder.Designer.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierOrder.Designer.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\CashierOrder.Designer.cs",
+              "ViewState": "AgIAACQBAAAAAAAAAAAAAEQBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T04:34:35.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CashierOrder.cs [Design]",
-              "DocumentMoniker": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierOrder.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierOrder.cs",
               "RelativeDocumentMoniker": "InventoryManagementSystem\\CashierOrder.cs",
-              "ToolTip": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierOrder.cs [Design]*",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierOrder.cs [Design]*",
               "RelativeToolTip": "InventoryManagementSystem\\CashierOrder.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-06T02:40:14.83Z",
@@ -98,92 +199,314 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CategoriesData.cs",
-              "DocumentMoniker": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CategoriesData.cs",
-              "RelativeDocumentMoniker": "InventoryManagementSystem\\CategoriesData.cs",
-              "ToolTip": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CategoriesData.cs",
-              "RelativeToolTip": "InventoryManagementSystem\\CategoriesData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-06T02:25:35.434Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserData.cs",
-              "DocumentMoniker": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\UserData.cs",
-              "RelativeDocumentMoniker": "InventoryManagementSystem\\UserData.cs",
-              "ToolTip": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\UserData.cs",
-              "RelativeToolTip": "InventoryManagementSystem\\UserData.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-06T02:25:19.821Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\Form1.cs",
-              "RelativeDocumentMoniker": "InventoryManagementSystem\\Form1.cs",
-              "ToolTip": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\Form1.cs",
-              "RelativeToolTip": "InventoryManagementSystem\\Form1.cs",
-              "ViewState": "AgIAALEAAAAAAAAAAADwv74AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-06T01:42:50.327Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CashierOrder.cs",
-              "DocumentMoniker": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierOrder.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierOrder.cs",
               "RelativeDocumentMoniker": "InventoryManagementSystem\\CashierOrder.cs",
-              "ToolTip": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierOrder.cs*",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierOrder.cs*",
               "RelativeToolTip": "InventoryManagementSystem\\CashierOrder.cs*",
-              "ViewState": "AgIAAIMBAAAAAAAAAAAtwI4BAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-05T19:25:10.608Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "OrdersData.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\OrdersData.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\OrdersData.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\OrdersData.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\OrdersData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T05:02:23.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegisterForm.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\RegisterForm.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\RegisterForm.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\RegisterForm.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\RegisterForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T09:52:35.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddProductsData.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AddProductsData.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\AddProductsData.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AddProductsData.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\AddProductsData.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAzwGkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T05:08:13.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdminAddCategories.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminAddCategories.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\AdminAddCategories.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminAddCategories.cs [Design]",
+              "RelativeToolTip": "InventoryManagementSystem\\AdminAddCategories.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T06:09:14.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SQLQuery3.sql",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\SQLQuery3.sql",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\SQLQuery3.sql",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\SQLQuery3.sql",
+              "RelativeToolTip": "InventoryManagementSystem\\SQLQuery3.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-07-06T03:22:25.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserData.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\UserData.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\UserData.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\UserData.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\UserData.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA3wBQAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T02:25:19.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RegisterForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\RegisterForm.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\RegisterForm.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\RegisterForm.cs [Design]",
+              "RelativeToolTip": "InventoryManagementSystem\\RegisterForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T09:52:31.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\MainForm.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\MainForm.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\MainForm.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\MainForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T09:52:03.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\Form2.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Form2.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\Form2.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Form2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T09:51:57.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Form2.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\Form2.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Form2.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\Form2.cs [Design]",
+              "RelativeToolTip": "InventoryManagementSystem\\Form2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T09:51:54.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "CashierMainForm.cs",
-              "DocumentMoniker": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierMainForm.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierMainForm.cs",
               "RelativeDocumentMoniker": "InventoryManagementSystem\\CashierMainForm.cs",
-              "ToolTip": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierMainForm.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierMainForm.cs",
               "RelativeToolTip": "InventoryManagementSystem\\CashierMainForm.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAQwDUAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAswDUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-05T19:08:03.25Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\Form1.cs",
-              "RelativeDocumentMoniker": "InventoryManagementSystem\\Form1.cs",
-              "ToolTip": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\Form1.cs [Design]",
-              "RelativeToolTip": "InventoryManagementSystem\\Form1.cs [Design]",
+              "DocumentIndex": 17,
+              "Title": "CategoriesData.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CategoriesData.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\CategoriesData.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CategoriesData.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\CategoriesData.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAqwBkAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T17:41:29.218Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-07-06T02:25:35.434Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SQLQuery1.sql ",
-              "DocumentMoniker": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\SQLQuery1.sql",
-              "RelativeDocumentMoniker": "InventoryManagementSystem\\SQLQuery1.sql",
-              "ToolTip": "D:\\Project\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\SQLQuery1.sql",
-              "RelativeToolTip": "InventoryManagementSystem\\SQLQuery1.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-05T08:11:57.897Z",
+              "DocumentIndex": 16,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\Form1.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Form1.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\Form1.cs [Design]",
+              "RelativeToolTip": "InventoryManagementSystem\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T17:41:29.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\Form1.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Form1.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\Form1.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Form1.cs",
+              "ViewState": "AgIAAL8AAAAAAAAAAAAswA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T01:42:50.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CashierMainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierMainForm.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\CashierMainForm.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierMainForm.cs [Design]",
+              "RelativeToolTip": "InventoryManagementSystem\\CashierMainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T04:34:46.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AdminDashboard.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminDashboard.Designer.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\AdminDashboard.Designer.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminDashboard.Designer.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\AdminDashboard.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T09:49:57.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AdminDashboard.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminDashboard.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\AdminDashboard.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminDashboard.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\AdminDashboard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T09:49:51.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AdminAddUsers.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminAddUsers.Designer.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\AdminAddUsers.Designer.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminAddUsers.Designer.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\AdminAddUsers.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T06:08:19.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AdminAddUser.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminAddUser.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\AdminAddUser.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminAddUser.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\AdminAddUser.cs",
+              "ViewState": "AgIAAOYAAAAAAAAAAAAAAAkAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T09:48:26.304Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AdminAddUser.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminAddUser.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\AdminAddUser.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminAddUser.cs [Design]",
+              "RelativeToolTip": "InventoryManagementSystem\\AdminAddUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T09:48:23.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "AdminAddProducts.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminAddProducts.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\AdminAddProducts.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminAddProducts.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\AdminAddProducts.cs",
+              "ViewState": "AgIAAJQBAAAAAAAAAAAmwBEAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T04:59:55.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AdminAddUsers.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminAddUsers.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\AdminAddUsers.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminAddUsers.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\AdminAddUsers.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAABAAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T06:08:29.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\MainForm.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\MainForm.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\MainForm.cs [Design]",
+              "RelativeToolTip": "InventoryManagementSystem\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T06:09:37.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AdminAddUsers.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminAddUsers.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\AdminAddUsers.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\AdminAddUsers.cs [Design]",
+              "RelativeToolTip": "InventoryManagementSystem\\AdminAddUsers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T06:08:25.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CashierMainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierMainForm.Designer.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\CashierMainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\HESHAN\\Desktop\\Inventory-management-system\\InventoryManagementSystem\\InventoryManagementSystem\\CashierMainForm.Designer.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\CashierMainForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T04:35:33.051Z"
             }
           ]
         }

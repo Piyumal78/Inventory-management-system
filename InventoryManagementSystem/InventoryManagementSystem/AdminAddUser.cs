@@ -7,7 +7,7 @@ namespace InventoryManagementSystem
 {
     public partial class AdminAddUser : UserControl
     {
-        private SqlConnection connect = new SqlConnection(@"Data Source=PIYUMAL\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False");
+        private SqlConnection connect = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False");
         private int selectedUserId = 0;
 
         public AdminAddUser()

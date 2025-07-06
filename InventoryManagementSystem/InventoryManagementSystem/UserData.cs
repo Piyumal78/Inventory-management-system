@@ -18,7 +18,7 @@ namespace InventoryManagementSystem
         {
             List<UserData> listData = new List<UserData>();
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=PIYUMAL\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False"))
             {
                 connection.Open();
 
