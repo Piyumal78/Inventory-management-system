@@ -9,16 +9,7 @@ namespace InventoryManagementSystem
     {
         SqlConnection connect = new SqlConnection(@"Data Source=PIYUMAL\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False");
 
-<<<<<<< Updated upstream
-        public string CID;
-        public string PID;
-        public string PName;
-        public string Category;
-        public string OrigPrice;
-        public string QTY;
-        public string TotalPrice;
-        public string Date;
-=======
+
         public int ID { get; set; }
         public string CID { get; set; }
         public string PID { get; set; }
@@ -28,7 +19,7 @@ namespace InventoryManagementSystem
         public int QTY { get; set; }
         public float TotalPrice { get; set; }
         public string Date { get; set; }
->>>>>>> Stashed changes
+
 
         // Fetch all orders for a specific customer_id
         public List<OrdersData> allOrdersData(int customerId)
@@ -41,23 +32,8 @@ namespace InventoryManagementSystem
                 string selectData = "SELECT * FROM orders WHERE customer_id=@cID";
                 using (SqlCommand cmd = new SqlCommand(selectData, connect))
                 {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-                    connect.Open();
-                }
-                catch (Exception ex)
-                {
 
-                }
-                finally
-                {
 
-                }
-            }
-            
-=======
-=======
->>>>>>> Stashed changes
                     cmd.Parameters.AddWithValue("@cID", customerId);
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
@@ -89,7 +65,7 @@ namespace InventoryManagementSystem
                 connect.Close();
             }
             return listData;
->>>>>>> Stashed changes
+
         }
 
         // Optional: Helper to get latest customer_id if you still want that
