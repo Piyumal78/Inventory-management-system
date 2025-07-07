@@ -15,7 +15,7 @@ namespace InventoryManagementSystem
 {
     public partial class AdminAddProducts : UserControl
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=PIYUMAL\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False");
+        SqlConnection connect = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False");
         public AdminAddProducts()
         {
             InitializeComponent();

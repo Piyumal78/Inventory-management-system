@@ -1,19 +1,13 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
+using System.Drawing.Printing;
+using System.Windows.Forms;
 
 namespace InventoryManagementSystem
 {
     public partial class CashierOrder : UserControl
     {
-<<<<<<< Updated upstream
-        SqlConnection
-        connect = new SqlConnection(@"Data Source=PIYUMAL\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False");
-        public CashierOrder()
-        {
-            InitializeComponent();
-            displayAllAvaliableProducts();
-            displayAllCategories();
-=======
+
         SqlConnection connect = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False");
         private int idGen;
         private int prodID = 0;
@@ -35,7 +29,7 @@ namespace InventoryManagementSystem
             displayAllAvaliableProducts();
             displayAllCategories();
             IDGenerator();
-<<<<<<< Updated upstream
+
             displayOrders();
         }
 
@@ -46,29 +40,12 @@ namespace InventoryManagementSystem
                 Invoke((MethodInvoker)refreshData);
                 return;
             }
-            
-            displayAllAvaliableProducts();
-            displayAllCategories();
-            IDGenerator();
-            displayOrders();
->>>>>>> Stashed changes
-=======
-            displayOrders();
-        }
 
-        public void refreshData()
-        {
-            if (InvokeRequired)
-            {
-                Invoke((MethodInvoker)refreshData);
-                return;
-            }
-            
             displayAllAvaliableProducts();
             displayAllCategories();
             IDGenerator();
             displayOrders();
->>>>>>> Stashed changes
+
         }
 
         public void displayAllAvaliableProducts()
@@ -84,9 +61,6 @@ namespace InventoryManagementSystem
 
         private void label9_Click(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
-
-=======
             OrdersData oData = new OrdersData();
             List<OrdersData> listData = oData.allOrdersData(idGen); // Pass current customer/session id
             dataGridView1.DataSource = listData;
@@ -99,10 +73,7 @@ namespace InventoryManagementSystem
             }
             totalPrice = sum;
             cashierOrder_totalPrice.Text = totalPrice.ToString("0.00");
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -350,38 +321,30 @@ namespace InventoryManagementSystem
                 try
                 {
                     connect.Open();
-                    string selectData = $"SELECT * FROM products WHERE prod_id='{selectedValue}' AND status=@status";
+                    string selectData = "SELECT * FROM products WHERE prod_id = @prod_id AND status = @status";
 
                     using (SqlCommand cmd = new SqlCommand(selectData, connect))
                     {
-
-                        cmd.Parameters.AddWithValue("@status", "Available"); // ✅ Corrected spelling
+                        cmd.Parameters.AddWithValue("@prod_id", selectedValue);
+                        cmd.Parameters.AddWithValue("@status", "Available");
 
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            while (reader.Read())
+                            if (reader.HasRows)
                             {
-<<<<<<< Updated upstream
-                                string prodName = reader["prod_name"].ToString();
-                                float prodPrice = Convert.ToSingle(reader["price"]);
-
-                                cashierOrder_prodName.Text = prodName;
-                                cashierOrder_price.Text = prodPrice.ToString("0.00");
-
-=======
-                                cashierOrder_prodName.Text = reader["prod_name"].ToString();
-                                unitPrice = Convert.ToSingle(reader["price"]);
-                                cashierOrder_price.Text = (unitPrice * (float)cashierOrder_qty.Value).ToString("0.00");
+                                while (reader.Read())
+                                {
+                                    cashierOrder_prodName.Text = reader["prod_name"].ToString();
+                                    unitPrice = Convert.ToSingle(reader["price"]);
+                                    cashierOrder_price.Text = (unitPrice * (float)cashierOrder_qty.Value).ToString("0.00");
+                                }
                             }
                             else
                             {
+                                // Product not found or not available
                                 cashierOrder_prodName.Text = "";
                                 cashierOrder_price.Text = "";
                                 unitPrice = 0;
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
                             }
                         }
                     }
@@ -395,164 +358,207 @@ namespace InventoryManagementSystem
                     connect.Close();
                 }
             }
-<<<<<<< Updated upstream
         }
 
-        
-
-        private void cashierOrder_prodName_Click(object sender, EventArgs e)
-        {
-
-=======
-            else
-            {
-                cashierOrder_prodName.Text = "";
-                cashierOrder_price.Text = "";
-                unitPrice = 0;
-            }
-        }
 
         private void cashierOrder_qty_ValueChanged(object sender, EventArgs e)
         {
             cashierOrder_price.Text = (unitPrice * (float)cashierOrder_qty.Value).ToString("0.00");
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
         }
 
 
+
+        //private void cashierOrder_addBtn_Click(object sender, EventArgs e)
+        //{
+        //    IDGenerator();
+
+
+        //    if (cashierOrder_category.SelectedIndex == -1 || cashierOrder_prodID.SelectedIndex == -1
+        //       || cashierOrder_prodName.Text == "" || cashierOrder_price.Text == "" || cashierOrder_qty.Value == 0)
+        //    {
+        //        MessageBox.Show("Please select item first", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //    else
+        //    {
+        //        connect.Open();
+        //        float getPrice = unitPrice;
+
+        //        string insertData = "INSERT INTO orders (customer_id, prod_id, prod_name, category, qty, orig_price, total_price, order_date) " +
+        //            "VALUES(@ID, @prodID, @prodName, @cat, @qty, @origPrice, @totalprice, @date)";
+        //        using (SqlCommand cmd = new SqlCommand(insertData, connect))
+        //        {
+        //            try
+        //            {
+        //                connect.Open();
+
+        //                float getPrice = 0;
+        //                string selectOrder = "SELECT * FROM products WHERE prod_id=@prodID";
+        //                using (SqlCommand getOrder = new SqlCommand(selectOrder, connect))
+        //                {
+        //                    getOrder.Parameters.AddWithValue("@prodID", cashierOrder_prodID.SelectedItem);
+
+        //                    using (SqlDataReader reader = getOrder.ExecuteReader())
+        //                    {
+        //                        if (reader.Read())
+        //                        {
+        //                            object rawValue = reader["price"];
+
+        //                            if (rawValue != DBNull.Value)
+        //                            {
+        //                                getPrice = Convert.ToSingle(rawValue);
+        //                            }
+        //                        }
+        //                    }
+        //                }
+
+        //                string insertData = "INSERT INTO orders (customer_id, prod_id, prod_name, category, qty, orig_price, total_price, order_date) " +
+        //                    "VALUES(@ID, @prodID, @prodName, @cat, @qty, @origPrice, @totalprice, @date)";
+
+        //                using (SqlCommand cmd = new SqlCommand(insertData, connect))
+        //                {
+        //                    cmd.Parameters.AddWithValue("@ID", idGen);
+        //                    cmd.Parameters.AddWithValue("@prodID", cashierOrder_prodID.SelectedItem);
+        //                    cmd.Parameters.AddWithValue("@prodName", cashierOrder_prodName.Text.Trim());
+        //                    cmd.Parameters.AddWithValue("@cat", cashierOrder_category.SelectedItem);
+        //                    cmd.Parameters.AddWithValue("@qty", cashierOrder_qty.Value);
+        //                    cmd.Parameters.AddWithValue("@origPrice", getPrice);
+
+        //                    float totalP = (getPrice * (int)cashierOrder_qty.Value);
+
+        //                    cmd.Parameters.AddWithValue("@totalprice", totalP);
+
+        //                    DateTime today = DateTime.Today;
+        //                    cmd.Parameters.AddWithValue("@date", today);
+
+        //                    cmd.ExecuteNonQuery();
+        //                }
+
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                MessageBox.Show("Failed connection: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //            }
+        //            finally
+        //            {
+        //                connect.Close();
+        //            }
+        //        }
+        //    }
+
+
+        //    displayOrders();
+
+        //}
 
         private void cashierOrder_addBtn_Click(object sender, EventArgs e)
         {
             IDGenerator();
 
-
-            if (cashierOrder_category.SelectedIndex == -1 || cashierOrder_prodID.SelectedIndex == -1
-               || cashierOrder_prodName.Text == "" || cashierOrder_price.Text == "" || cashierOrder_qty.Value == 0)
+            if (cashierOrder_category.SelectedIndex == -1 ||
+                cashierOrder_prodID.SelectedIndex == -1 ||
+                cashierOrder_prodName.Text == "" ||
+                cashierOrder_price.Text == "" ||
+                cashierOrder_qty.Value == 0)
             {
                 MessageBox.Show("Please select item first", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-<<<<<<< Updated upstream
-                if (checkConnection())
-=======
-                connect.Open();
-                float getPrice = unitPrice;
-
-                string insertData = "INSERT INTO orders (customer_id, prod_id, prod_name, category, qty, orig_price, total_price, order_date) " +
-                    "VALUES(@ID, @prodID, @prodName, @cat, @qty, @origPrice, @totalprice, @date)";
-                using (SqlCommand cmd = new SqlCommand(insertData, connect))
->>>>>>> Stashed changes
-                {
-                    try
-                    {
-                        connect.Open();
-
-                        float getPrice = 0;
-                        string selectOrder = "SELECT * FROM products WHERE prod_id=@prodID";
-                        using (SqlCommand getOrder = new SqlCommand(selectOrder, connect))
-                        {
-                            getOrder.Parameters.AddWithValue("@prodID", cashierOrder_prodID.SelectedItem);
-
-                            using (SqlDataReader reader = getOrder.ExecuteReader())
-                            {
-                                if (reader.Read())
-                                {
-                                    object rawValue = reader["price"];
-
-                                    if (rawValue != DBNull.Value)
-                                    {
-                                        getPrice = Convert.ToSingle(rawValue);
-                                    }
-                                }
-                            }
-                        }
-
-                        string insertData = "INSERT INTO orders (customer_id, prod_id, prod_name, category, qty, orig_price, total_price, order_date) " +
-                            "VALUES(@ID, @prodID, @prodName, @cat, @qty, @origPrice, @totalprice, @date)";
-
-                        using (SqlCommand cmd = new SqlCommand(insertData, connect))
-                        {
-                            cmd.Parameters.AddWithValue("@ID", idGen);
-                            cmd.Parameters.AddWithValue("@prodID", cashierOrder_prodID.SelectedItem);
-                            cmd.Parameters.AddWithValue("@prodName", cashierOrder_prodName.Text.Trim());
-                            cmd.Parameters.AddWithValue("@cat", cashierOrder_category.SelectedItem);
-                            cmd.Parameters.AddWithValue("@qty", cashierOrder_qty.Value);
-                            cmd.Parameters.AddWithValue("@origPrice", getPrice);
-
-                            float totalP = (getPrice * (int)cashierOrder_qty.Value);
-
-                            cmd.Parameters.AddWithValue("@totalprice", totalP);
-
-                            DateTime today = DateTime.Today;
-                            cmd.Parameters.AddWithValue("@date", today);
-
-                            cmd.ExecuteNonQuery();
-                        }
-
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Failed connection: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    finally
-                    {
-                        connect.Close();
-                    }
-                }
+                return;
             }
 
-<<<<<<< Updated upstream
-
-=======
-            displayOrders();
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-        }
-
-        private int idGen;
-
-        public void IDGenerator()
-        {
-            using (SqlConnection connect = new SqlConnection(@"Data Source=PIYUMAL\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False"))
-
+            try
             {
                 connect.Open();
-                
-        string selectData = "SELECT MAX(customer_id) FROM customers";
 
-                using (SqlCommand cmd = new SqlCommand(selectData, connect))
+                float getPrice = 0;
+                string selectOrder = "SELECT price FROM products WHERE prod_id = @prodID";
+                using (SqlCommand getOrder = new SqlCommand(selectOrder, connect))
                 {
-                    object result = cmd.ExecuteScalar();
+                    getOrder.Parameters.AddWithValue("@prodID", cashierOrder_prodID.SelectedItem);
 
-                    if (result != DBNull.Value)
+                    using (SqlDataReader reader = getOrder.ExecuteReader())
                     {
-                        int temp = Convert.ToInt32(result);
-
-                        if (temp == 0)
+                        if (reader.Read() && reader["price"] != DBNull.Value)
                         {
-                            idGen = 1;
+                            getPrice = Convert.ToSingle(reader["price"]);
                         }
                         else
                         {
-                            idGen = temp + 1;
+                            MessageBox.Show("Product not found or invalid price", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
                         }
-                    }
-                    else
-                    {
-                        idGen = 1;
                     }
                 }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
+                // Insert order
+                string insertData = @"INSERT INTO orders 
+                              (customer_id, prod_id, prod_name, category, qty, orig_price, total_price, order_date) 
+                              VALUES (@ID, @prodID, @prodName, @cat, @qty, @origPrice, @totalprice, @date)";
+
+                using (SqlCommand insertCmd = new SqlCommand(insertData, connect))
+                {
+                    float totalP = getPrice * (int)cashierOrder_qty.Value;
+
+                    insertCmd.Parameters.AddWithValue("@ID", idGen);
+                    insertCmd.Parameters.AddWithValue("@prodID", cashierOrder_prodID.SelectedItem);
+                    insertCmd.Parameters.AddWithValue("@prodName", cashierOrder_prodName.Text.Trim());
+                    insertCmd.Parameters.AddWithValue("@cat", cashierOrder_category.SelectedItem);
+                    insertCmd.Parameters.AddWithValue("@qty", cashierOrder_qty.Value);
+                    insertCmd.Parameters.AddWithValue("@origPrice", getPrice);
+                    insertCmd.Parameters.AddWithValue("@totalprice", totalP);
+                    insertCmd.Parameters.AddWithValue("@date", DateTime.Today);
+
+                    insertCmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Order added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                displayOrders(); // Ensure this method exists
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed connection: " + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (connect.State == ConnectionState.Open)
+                    connect.Close();
+            }
+        }
+
+        
+
+        public void IDGenerator()
+        {
+            // Use your existing connection object instead of creating a new one, if available
+            using (SqlConnection connect = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False"))
+            {
+                try
+                {
+                    connect.Open();
+
+                    string selectData = "SELECT ISNULL(MAX(customer_id), 0) FROM customers";
+
+                    using (SqlCommand cmd = new SqlCommand(selectData, connect))
+                    {
+                        int maxID = (int)cmd.ExecuteScalar();
+                        idGen = maxID + 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ID generation failed: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    idGen = 1; // fallback default
+                }
+                finally
+                {
+                    if (connect.State == ConnectionState.Open)
+                        connect.Close();
+                }
+            }
+        }
+
+
+
+
         private void cashierOrder_removeBtn_Click_1(object sender, EventArgs e)
         {
             if (prodID == 0)
@@ -594,17 +600,24 @@ namespace InventoryManagementSystem
             {
                 prodID = 0;
                 return;
->>>>>>> Stashed changes
+
             }
 
         }
 
+        private void clearFields()
+        {
+            cashierOrder_category.SelectedIndex = -1;
+            cashierOrder_prodID.SelectedIndex = -1;
+            
+           
+            cashierOrder_qty.Value = 0;
+            
+            cashierOrder_amount.Clear();
+           
+        }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
+
         private void cashierOrder_clearBtn_Click_1(object sender, EventArgs e)
         {
             clearFields();
@@ -700,8 +713,6 @@ namespace InventoryManagementSystem
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
-
-
             float y = 0;
             int count = 0;
             int colWidth = 120;
@@ -715,104 +726,85 @@ namespace InventoryManagementSystem
 
             float margin = e.MarginBounds.Top;
 
-            StringFormat alignCenter = new StringFormat();
-            alignCenter.Alignment = StringAlignment.Center;
-            alignCenter.LineAlignment = StringAlignment.Center;
+            StringFormat alignCenter = new StringFormat
+            {
+                Alignment = StringAlignment.Center,
+                LineAlignment = StringAlignment.Center
+            };
 
             string headerText = "MarcoMan's Inventory Management System";
-            y = (margin + count * headerFont.GetHeight(e.Graphics) + headerMargin);
-            e.Graphics.DrawString(headerText, headerFont, Brushes.Black, e.MarginBounds.Left + (dataGridView1.ColumnCount / 2) * colWidth, y, alignCenter);
+            y = margin + headerMargin;
+            e.Graphics.DrawString(headerText, headerFont, Brushes.Black,
+                e.MarginBounds.Left + (dataGridView1.ColumnCount / 2) * colWidth, y, alignCenter);
 
-            count++;
-
-            y += tableMargin;
-
+            y += tableMargin + headerFont.GetHeight(e.Graphics);
             string[] header = { "ID", "CID", "PID", "PName", "Category", "OrigPrice", "QTY" };
 
             for (int q = 0; q < header.Length; q++)
             {
-                y = margin + count * bold.GetHeight(e.Graphics) + tableMargin;
-                e.Graphics.DrawString(header[q], bold, Brushes.Black, e.MarginBounds.Left + q * colWidth, y, alignCenter);
+                e.Graphics.DrawString(header[q], bold, Brushes.Black,
+                    e.MarginBounds.Left + q * colWidth, y, alignCenter);
             }
-            count++;
 
-            float rSpace = e.MarginBounds.Bottom - y;
+            y += bold.GetHeight(e.Graphics);
 
             while (rowIndex < dataGridView1.Rows.Count)
             {
                 DataGridViewRow row = dataGridView1.Rows[rowIndex];
                 for (int q = 0; q < dataGridView1.Columns.Count; q++)
                 {
-                    string cellValue = row.Cells[q].Value?.ToString() ?? string.Empty;
-                    e.Graphics.DrawString(cellValue, font, Brushes.Black, e.MarginBounds.Left + q * colWidth, y, alignCenter);
+                    string cellValue = row.Cells[q].Value?.ToString() ?? "";
+                    e.Graphics.DrawString(cellValue, font, Brushes.Black,
+                        e.MarginBounds.Left + q * colWidth, y, alignCenter);
                 }
-                count++;
+
+                y += font.GetHeight(e.Graphics);
                 rowIndex++;
 
-                if (y + font.GetHeight(e.Graphics) > e.MarginBounds.Bottom)
+                if (y > e.MarginBounds.Bottom - 100)
                 {
                     e.HasMorePages = true;
                     return;
                 }
-                else
-                {
-                    e.HasMorePages = false;
-                }
             }
-            int labelmargin = (int)Math.Min(rSpace, 200);
 
+            // Draw totals
             DateTime today = DateTime.Now;
+            float labelX = e.MarginBounds.Right - e.Graphics.MeasureString("Change:", labelFont).Width;
+            y += 20;
 
-            float labelX = e.MarginBounds.Right - e.Graphics.MeasureString("------------------", labelFont).Width;
-
-            y = e.MarginBounds.Bottom - labelmargin - labelFont.GetHeight(e.Graphics);
-            e.Graphics.DrawString("Total Price:\t$" + totalPrice + "\nAmount: \t$" + cashierOrder_amount.Text.Trim()
-                + "\n\t\t------------------\nChange:\t$" + cashierOrder_change.Text.Trim(), labelFont, Brushes.Black, labelX, y);
-
-            labelmargin = (int)Math.Min(rSpace, -40);
-
-            string labelText = today.ToString();
-            y = e.MarginBounds.Bottom - labelmargin - labelFont.GetHeight(e.Graphics);
-            e.Graphics.DrawString(labelText, labelFont, Brushes.Black, e.MarginBounds.Right - e.Graphics.MeasureString("------------------", labelFont).Width, y);
+            e.Graphics.DrawString("Total Price:\t$" + totalPrice, labelFont, Brushes.Black, labelX, y); y += 30;
+            e.Graphics.DrawString("Amount:\t$" + cashierOrder_amount.Text.Trim(), labelFont, Brushes.Black, labelX, y); y += 30;
+            e.Graphics.DrawString("Change:\t$" + cashierOrder_change.Text.Trim(), labelFont, Brushes.Black, labelX, y); y += 30;
+            e.Graphics.DrawString("-----------------------------", labelFont, Brushes.Black, labelX, y); y += 30;
+            e.Graphics.DrawString(today.ToString(), font, Brushes.Black, labelX, y);
         }
+    
 
-        private void cashierOrder_receipt_Click(object sender, EventArgs e)
-        {
-            if (cashierOrder_amount.Text == "" || dataGridView2.Rows.Count < 0)
-            {
-                MessageBox.Show("Please order first", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
-                printDocument1.BeginPrint += new PrintEventHandler(printDocument1_BeginPrint);
-
-                printPreviewDialog1.Document = printDocument1;
-                printPreviewDialog1.ShowDialog();
-            }
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-        }
+      
 
         private void printDocument1_BeginPrint(object sender, PrintEventArgs e)
         {
             rowIndex = 0;
         }
 
-        
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+        public void displayOrders()
+        {
+            OrdersData oData = new OrdersData();
+            List<OrdersData> listData = oData.allOrdersData(idGen); // Pass current customer/session id
+            dataGridView1.DataSource = listData;
+
+            // Calculate total price
+            float sum = 0;
+            foreach (var order in listData)
+            {
+                sum += order.TotalPrice;
+            }
+
+            totalPrice = sum;
+            cashierOrder_totalPrice.Text = totalPrice.ToString("0.00");
+        }
+
+
     }
 }

@@ -305,20 +305,7 @@
             panel3.Size = new Size(1072, 715);
             panel3.TabIndex = 19;
             // 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            // cashierOrder1
-            // 
-            cashierOrder1.Location = new Point(0, 0);
-            cashierOrder1.Name = "cashierOrder1";
-            cashierOrder1.Size = new Size(1282, 884);
-            cashierOrder1.TabIndex = 1;
-            
-            // 
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
             // adminDashborad1
             // 
             adminDashborad1.Location = new Point(0, 0);
