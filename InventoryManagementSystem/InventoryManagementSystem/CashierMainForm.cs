@@ -25,7 +25,10 @@ namespace InventoryManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            adminDashborad1.Visible = false;
+            adminAddProducts1.Visible = false;
+            cashierCustomersForm1.Visible = false;
+            cashierOrder1.Visible = true;
         }
 
         private void logout_btn_Click(object sender, EventArgs e)
@@ -51,6 +54,38 @@ namespace InventoryManagementSystem
 
         }
 
-        
+        private void cashierOrder1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            adminDashborad1.Visible = false;
+            adminAddProducts1.Visible = false;
+            cashierCustomersForm1.Visible = true;
+            cashierOrder1.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            adminDashborad1.Visible = true;
+            adminAddProducts1.Visible = false;
+            cashierCustomersForm1.Visible = false;
+            cashierOrder1.Visible = false;
+        }
+
+        private void addProducts_btn_Click(object sender, EventArgs e)
+        {
+            adminDashborad1.Visible = false;
+            adminAddProducts1.Visible = true;
+            cashierCustomersForm1.Visible = false;
+            cashierOrder1.Visible = false;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

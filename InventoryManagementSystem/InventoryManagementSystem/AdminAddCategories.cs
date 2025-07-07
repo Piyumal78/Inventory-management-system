@@ -13,6 +13,18 @@ namespace InventoryManagementSystem
         public AdminAddCategories()
         {
             InitializeComponent();
+            displayAllCategoriesData();
+        }
+
+        public void refreshData()
+        {
+            if (InvokeRequired)
+            {
+                Invoke((MethodInvoker)refreshData);
+                return;
+            }
+            InitializeComponent();
+            displayAllCategoriesData();
         }
 
         public void displayAllCategoriesData()

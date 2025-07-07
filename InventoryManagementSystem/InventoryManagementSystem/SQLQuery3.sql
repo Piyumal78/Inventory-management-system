@@ -37,3 +37,15 @@ ALTER TABLE orders
 ADD customer_id INT NULL
 
 SELECT * FROM orders
+
+DROP TABLE users;
+
+CREATE TABLE users (
+    id INT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing ID
+    username NVARCHAR(100) NOT NULL,
+    password NVARCHAR(100) NOT NULL,
+    role NVARCHAR(50) NOT NULL,
+    status NVARCHAR(50) NOT NULL,
+    date DATETIME NOT NULL
+);
+

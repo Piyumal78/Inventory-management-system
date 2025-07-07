@@ -5,6 +5,7 @@ namespace InventoryManagementSystem
 {
     public partial class CashierOrder : UserControl
     {
+<<<<<<< Updated upstream
         SqlConnection
         connect = new SqlConnection(@"Data Source=PIYUMAL\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False");
         public CashierOrder()
@@ -12,6 +13,44 @@ namespace InventoryManagementSystem
             InitializeComponent();
             displayAllAvaliableProducts();
             displayAllCategories();
+=======
+        SqlConnection connect = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False");
+        private int idGen;
+        private int prodID = 0;
+        private float unitPrice = 0;
+        private float totalPrice = 0;
+        private int rowIndex = 0;
+
+        public CashierOrder()
+        {
+            InitializeComponent();
+            cashierOrder_category.SelectedIndexChanged += cashierOrder_category_SelectedIndexChanged;
+            cashierOrder_prodID.SelectedIndexChanged += cashierOrder_prodID_SelectedIndexChanged;
+            cashierOrder_qty.ValueChanged += cashierOrder_qty_ValueChanged;
+            cashierOrder_amount.KeyDown += cashierOrder_amount_KeyDown;
+            cashierOrder_payOrders.Click += cashierOrder_payOrders_Click_1;
+            cashierOrder_clearBtn.Click += cashierOrder_clearBtn_Click_1;
+
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            displayAllAvaliableProducts();
+            displayAllCategories();
+            IDGenerator();
+            displayOrders();
+        }
+
+        public void refreshData()
+        {
+            if (InvokeRequired)
+            {
+                Invoke((MethodInvoker)refreshData);
+                return;
+            }
+            
+            displayAllAvaliableProducts();
+            displayAllCategories();
+            IDGenerator();
+            displayOrders();
+>>>>>>> Stashed changes
         }
 
         public void displayAllAvaliableProducts()
@@ -27,7 +66,22 @@ namespace InventoryManagementSystem
 
         private void label9_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
 
+=======
+            OrdersData oData = new OrdersData();
+            List<OrdersData> listData = oData.allOrdersData(idGen); // Pass current customer/session id
+            dataGridView1.DataSource = listData;
+
+            // Calculate total price from the list
+            float sum = 0;
+            foreach (var order in listData)
+            {
+                sum += order.TotalPrice;
+            }
+            totalPrice = sum;
+            cashierOrder_totalPrice.Text = totalPrice.ToString("0.00");
+>>>>>>> Stashed changes
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -286,12 +340,24 @@ namespace InventoryManagementSystem
                         {
                             while (reader.Read())
                             {
+<<<<<<< Updated upstream
                                 string prodName = reader["prod_name"].ToString();
                                 float prodPrice = Convert.ToSingle(reader["price"]);
 
                                 cashierOrder_prodName.Text = prodName;
                                 cashierOrder_price.Text = prodPrice.ToString("0.00");
 
+=======
+                                cashierOrder_prodName.Text = reader["prod_name"].ToString();
+                                unitPrice = Convert.ToSingle(reader["price"]);
+                                cashierOrder_price.Text = (unitPrice * (float)cashierOrder_qty.Value).ToString("0.00");
+                            }
+                            else
+                            {
+                                cashierOrder_prodName.Text = "";
+                                cashierOrder_price.Text = "";
+                                unitPrice = 0;
+>>>>>>> Stashed changes
                             }
                         }
                     }
@@ -305,6 +371,7 @@ namespace InventoryManagementSystem
                     connect.Close();
                 }
             }
+<<<<<<< Updated upstream
         }
 
         
@@ -312,6 +379,19 @@ namespace InventoryManagementSystem
         private void cashierOrder_prodName_Click(object sender, EventArgs e)
         {
 
+=======
+            else
+            {
+                cashierOrder_prodName.Text = "";
+                cashierOrder_price.Text = "";
+                unitPrice = 0;
+            }
+        }
+
+        private void cashierOrder_qty_ValueChanged(object sender, EventArgs e)
+        {
+            cashierOrder_price.Text = (unitPrice * (float)cashierOrder_qty.Value).ToString("0.00");
+>>>>>>> Stashed changes
         }
 
 
@@ -328,7 +408,16 @@ namespace InventoryManagementSystem
             }
             else
             {
+<<<<<<< Updated upstream
                 if (checkConnection())
+=======
+                connect.Open();
+                float getPrice = unitPrice;
+
+                string insertData = "INSERT INTO orders (customer_id, prod_id, prod_name, category, qty, orig_price, total_price, order_date) " +
+                    "VALUES(@ID, @prodID, @prodName, @cat, @qty, @origPrice, @totalprice, @date)";
+                using (SqlCommand cmd = new SqlCommand(insertData, connect))
+>>>>>>> Stashed changes
                 {
                     try
                     {
@@ -388,7 +477,11 @@ namespace InventoryManagementSystem
                 }
             }
 
+<<<<<<< Updated upstream
 
+=======
+            displayOrders();
+>>>>>>> Stashed changes
         }
 
         private int idGen;
@@ -425,10 +518,262 @@ namespace InventoryManagementSystem
                     }
                 }
 
+<<<<<<< Updated upstream
+=======
+        private void cashierOrder_removeBtn_Click_1(object sender, EventArgs e)
+        {
+            if (prodID == 0)
+            {
+                MessageBox.Show("Please select an order to remove.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (MessageBox.Show("Are you sure you want to remove this order with Product ID: "
+                    + prodID + "?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    try
+                    {
+                        connect.Open();
+                        string deleteData = "DELETE FROM orders WHERE id=@id";
+                        using (SqlCommand cmd = new SqlCommand(deleteData, connect))
+                        {
+                            cmd.Parameters.AddWithValue("@id", prodID);
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Order removed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Failed to remove order: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        connect.Close();
+                    }
+                }
+            }
+            displayOrders();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.RowIndex >= dataGridView1.Rows.Count)
+            {
+                prodID = 0;
+                return;
+>>>>>>> Stashed changes
             }
 
         }
 
 
+<<<<<<< Updated upstream
+=======
+        private void cashierOrder_clearBtn_Click_1(object sender, EventArgs e)
+        {
+            clearFields();
+        }
+
+        private void cashierOrder_payOrders_Click_1(object sender, EventArgs e)
+        {
+            IDGenerator();
+            if (string.IsNullOrEmpty(cashierOrder_amount.Text) || dataGridView1.Rows.Count < 1)
+            {
+                MessageBox.Show("Something went wrong. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                float amountPaid = 0;
+                if (!float.TryParse(cashierOrder_amount.Text, out amountPaid))
+                {
+                    MessageBox.Show("Invalid amount entered.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                float change = amountPaid - totalPrice;
+                if (change < 0)
+                {
+                    cashierOrder_change.Text = "";
+                    MessageBox.Show("Insufficient amount entered.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    cashierOrder_change.Text = change.ToString("0.00");
+                }
+
+                if (MessageBox.Show("Are you sure you want to pay your Order? ", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    try
+                    {
+                        connect.Open();
+                        string insertData = "INSERT INTO customers(customer_id, total_price, amount, change, order_date) " +
+                            "VALUES(@cID, @totalPrice, @amount, @change, @date)";
+                        using (SqlCommand cmd = new SqlCommand(insertData, connect))
+                        {
+                            cmd.Parameters.AddWithValue("@cID", idGen);
+                            cmd.Parameters.AddWithValue("@totalPrice", cashierOrder_totalPrice.Text);
+                            cmd.Parameters.AddWithValue("@amount", cashierOrder_amount.Text);
+                            cmd.Parameters.AddWithValue("@change", cashierOrder_change.Text);
+                            cmd.Parameters.AddWithValue("@date", DateTime.Today);
+                            cmd.ExecuteNonQuery();
+
+                            clearFields();
+
+                            MessageBox.Show("Payment successful. Thank you!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Failed to process payment: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        connect.Close();
+                    }
+                }
+            }
+            displayOrders();
+        }
+
+        private void cashierOrder_amount_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                float amountPaid = 0;
+                if (!float.TryParse(cashierOrder_amount.Text, out amountPaid))
+                {
+                    MessageBox.Show("Invalid amount entered.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    cashierOrder_amount.Text = "";
+                    cashierOrder_change.Text = "";
+                    return;
+                }
+
+                float change = amountPaid - totalPrice;
+                if (change < 0)
+                {
+                    cashierOrder_change.Text = "";
+                    MessageBox.Show("Insufficient amount entered.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    cashierOrder_change.Text = change.ToString("0.00");
+                }
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+
+
+            float y = 0;
+            int count = 0;
+            int colWidth = 120;
+            int headerMargin = 10;
+            int tableMargin = 10;
+
+            Font font = new Font("Tahoma", 12);
+            Font bold = new Font("Tahoma", 12, FontStyle.Bold);
+            Font headerFont = new Font("Tahoma", 14, FontStyle.Bold);
+            Font labelFont = new Font("Tahoma", 14, FontStyle.Bold);
+
+            float margin = e.MarginBounds.Top;
+
+            StringFormat alignCenter = new StringFormat();
+            alignCenter.Alignment = StringAlignment.Center;
+            alignCenter.LineAlignment = StringAlignment.Center;
+
+            string headerText = "MarcoMan's Inventory Management System";
+            y = (margin + count * headerFont.GetHeight(e.Graphics) + headerMargin);
+            e.Graphics.DrawString(headerText, headerFont, Brushes.Black, e.MarginBounds.Left + (dataGridView1.ColumnCount / 2) * colWidth, y, alignCenter);
+
+            count++;
+
+            y += tableMargin;
+
+            string[] header = { "ID", "CID", "PID", "PName", "Category", "OrigPrice", "QTY" };
+
+            for (int q = 0; q < header.Length; q++)
+            {
+                y = margin + count * bold.GetHeight(e.Graphics) + tableMargin;
+                e.Graphics.DrawString(header[q], bold, Brushes.Black, e.MarginBounds.Left + q * colWidth, y, alignCenter);
+            }
+            count++;
+
+            float rSpace = e.MarginBounds.Bottom - y;
+
+            while (rowIndex < dataGridView1.Rows.Count)
+            {
+                DataGridViewRow row = dataGridView1.Rows[rowIndex];
+                for (int q = 0; q < dataGridView1.Columns.Count; q++)
+                {
+                    string cellValue = row.Cells[q].Value?.ToString() ?? string.Empty;
+                    e.Graphics.DrawString(cellValue, font, Brushes.Black, e.MarginBounds.Left + q * colWidth, y, alignCenter);
+                }
+                count++;
+                rowIndex++;
+
+                if (y + font.GetHeight(e.Graphics) > e.MarginBounds.Bottom)
+                {
+                    e.HasMorePages = true;
+                    return;
+                }
+                else
+                {
+                    e.HasMorePages = false;
+                }
+            }
+            int labelmargin = (int)Math.Min(rSpace, 200);
+
+            DateTime today = DateTime.Now;
+
+            float labelX = e.MarginBounds.Right - e.Graphics.MeasureString("------------------", labelFont).Width;
+
+            y = e.MarginBounds.Bottom - labelmargin - labelFont.GetHeight(e.Graphics);
+            e.Graphics.DrawString("Total Price:\t$" + totalPrice + "\nAmount: \t$" + cashierOrder_amount.Text.Trim()
+                + "\n\t\t------------------\nChange:\t$" + cashierOrder_change.Text.Trim(), labelFont, Brushes.Black, labelX, y);
+
+            labelmargin = (int)Math.Min(rSpace, -40);
+
+            string labelText = today.ToString();
+            y = e.MarginBounds.Bottom - labelmargin - labelFont.GetHeight(e.Graphics);
+            e.Graphics.DrawString(labelText, labelFont, Brushes.Black, e.MarginBounds.Right - e.Graphics.MeasureString("------------------", labelFont).Width, y);
+        }
+
+        private void cashierOrder_receipt_Click(object sender, EventArgs e)
+        {
+            if (cashierOrder_amount.Text == "" || dataGridView2.Rows.Count < 0)
+            {
+                MessageBox.Show("Please order first", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+                printDocument1.BeginPrint += new PrintEventHandler(printDocument1_BeginPrint);
+
+                printPreviewDialog1.Document = printDocument1;
+                printPreviewDialog1.ShowDialog();
+            }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void printDocument1_BeginPrint(object sender, PrintEventArgs e)
+        {
+            rowIndex = 0;
+        }
+
+        
+>>>>>>> Stashed changes
     }
 }

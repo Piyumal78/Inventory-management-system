@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace InventoryManagementSystem
+{
+    public partial class CashierCustmoerForm : UserControl
+    {
+        public CashierCustmoerForm()
+        {
+            InitializeComponent();
+            displayAllCustomersData();
+        }
+
+        public void displayAllCustomersData()
+        {
+            try
+            {
+                CustomersData cData = new CustomersData();
+                List<CustomersData> listData = cData.allCustomers();
+                dataGridView1.DataSource = listData;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading customer data: " + ex.Message);
+            }
+        }
+    }
+}
+

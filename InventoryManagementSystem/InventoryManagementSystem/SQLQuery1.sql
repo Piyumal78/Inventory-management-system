@@ -8,6 +8,11 @@ CREATE TABLE users (
     date DATE
 );
 
+SELECT * FROM customers;
+
+SELECT COUNT(id) FROM customers;
+
+
 -- Insert default admin user
 INSERT INTO users (username, password, role, status, date)
 VALUES 

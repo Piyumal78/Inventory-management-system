@@ -85,7 +85,10 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(675, 345);
             panel1.TabIndex = 0;
+<<<<<<< Updated upstream
             panel1.Paint += panel1_Paint;
+=======
+>>>>>>> Stashed changes
             // 
             // label5
             // 
@@ -124,6 +127,7 @@
             cashierOrder_removeBtn.TabIndex = 10;
             cashierOrder_removeBtn.Text = "Remove";
             cashierOrder_removeBtn.UseVisualStyleBackColor = false;
+            cashierOrder_removeBtn.Click += cashierOrder_removeBtn_Click_1;
             // 
             // cashierOrder_addBtn
             // 
@@ -192,7 +196,11 @@
             label6.Name = "label6";
             label6.Size = new Size(103, 25);
             label6.TabIndex = 1;
+<<<<<<< Updated upstream
             label6.Text = "Proce($):";
+=======
+            label6.Text = "Price($):";
+>>>>>>> Stashed changes
             // 
             // label8
             // 
@@ -213,7 +221,10 @@
             cashierOrder_prodName.Size = new Size(107, 25);
             cashierOrder_prodName.TabIndex = 1;
             cashierOrder_prodName.Text = "Category:";
+<<<<<<< Updated upstream
             cashierOrder_prodName.Click += cashierOrder_prodName_Click;
+=======
+>>>>>>> Stashed changes
             // 
             // label4
             // 
@@ -303,6 +314,10 @@
             cashierOrder_receipt.TabIndex = 11;
             cashierOrder_receipt.Text = "Receipt";
             cashierOrder_receipt.UseVisualStyleBackColor = false;
+<<<<<<< Updated upstream
+=======
+            cashierOrder_receipt.Click += cashierOrder_receipt_Click;
+>>>>>>> Stashed changes
             // 
             // cashierOrder_payOrders
             // 
@@ -311,6 +326,7 @@
             cashierOrder_payOrders.FlatAppearance.MouseDownBackColor = Color.Blue;
             cashierOrder_payOrders.FlatAppearance.MouseOverBackColor = Color.Blue;
             cashierOrder_payOrders.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cashierOrder_payOrders.ForeColor = SystemColors.ButtonHighlight;
             cashierOrder_payOrders.Location = new Point(22, 578);
             cashierOrder_payOrders.Name = "cashierOrder_payOrders";
             cashierOrder_payOrders.Size = new Size(277, 48);
@@ -354,7 +370,10 @@
             label9.Size = new Size(151, 25);
             label9.TabIndex = 1;
             label9.Text = "Total Price($):";
+<<<<<<< Updated upstream
             label9.Click += label9_Click;
+=======
+>>>>>>> Stashed changes
             // 
             // cashierOrder_change
             // 

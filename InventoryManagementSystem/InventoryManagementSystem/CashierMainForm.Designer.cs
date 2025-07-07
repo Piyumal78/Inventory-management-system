@@ -34,19 +34,21 @@
             panel2 = new Panel();
             logout_btn = new Button();
             button10 = new Button();
-            Order = new Button();
-            button11 = new Button();
+            order_btn = new Button();
+            customers_btn = new Button();
             button12 = new Button();
-            button5 = new Button();
+            addProducts_btn = new Button();
             button7 = new Button();
             button4 = new Button();
             button3 = new Button();
-            button2 = new Button();
+            dashboard_btn = new Button();
             label2 = new Label();
             pictureBox1 = new PictureBox();
             panel3 = new Panel();
-            cashierOrder1 = new CashierOrder();
             adminDashborad1 = new AdminDashborad();
+            adminAddProducts1 = new AdminAddProducts();
+            cashierCustomersForm1 = new CashierCustomersForm();
+            cashierOrder1 = new CashierOrder();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -99,14 +101,14 @@
             panel2.BackColor = Color.FromArgb(134, 182, 246);
             panel2.Controls.Add(logout_btn);
             panel2.Controls.Add(button10);
-            panel2.Controls.Add(Order);
-            panel2.Controls.Add(button11);
+            panel2.Controls.Add(order_btn);
+            panel2.Controls.Add(customers_btn);
             panel2.Controls.Add(button12);
-            panel2.Controls.Add(button5);
+            panel2.Controls.Add(addProducts_btn);
             panel2.Controls.Add(button7);
             panel2.Controls.Add(button4);
             panel2.Controls.Add(button3);
-            panel2.Controls.Add(button2);
+            panel2.Controls.Add(dashboard_btn);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Left;
@@ -146,36 +148,37 @@
             button10.TabIndex = 17;
             button10.UseVisualStyleBackColor = true;
             // 
-            // Order
+            // order_btn
             // 
-            Order.FlatAppearance.BorderSize = 0;
-            Order.FlatAppearance.MouseDownBackColor = Color.Blue;
-            Order.FlatAppearance.MouseOverBackColor = Color.Blue;
-            Order.FlatStyle = FlatStyle.Flat;
-            Order.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            Order.ForeColor = Color.Blue;
-            Order.Location = new Point(12, 372);
-            Order.Name = "Order";
-            Order.Size = new Size(248, 55);
-            Order.TabIndex = 16;
-            Order.Text = "Order";
-            Order.UseVisualStyleBackColor = true;
-            Order.Click += button1_Click;
+            order_btn.FlatAppearance.BorderSize = 0;
+            order_btn.FlatAppearance.MouseDownBackColor = Color.Blue;
+            order_btn.FlatAppearance.MouseOverBackColor = Color.Blue;
+            order_btn.FlatStyle = FlatStyle.Flat;
+            order_btn.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            order_btn.ForeColor = Color.Blue;
+            order_btn.Location = new Point(12, 372);
+            order_btn.Name = "order_btn";
+            order_btn.Size = new Size(248, 55);
+            order_btn.TabIndex = 16;
+            order_btn.Text = "Order";
+            order_btn.UseVisualStyleBackColor = true;
+            order_btn.Click += button1_Click;
             // 
-            // button11
+            // customers_btn
             // 
-            button11.FlatAppearance.BorderSize = 0;
-            button11.FlatAppearance.MouseDownBackColor = Color.Blue;
-            button11.FlatAppearance.MouseOverBackColor = Color.Blue;
-            button11.FlatStyle = FlatStyle.Flat;
-            button11.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            button11.ForeColor = Color.Blue;
-            button11.Location = new Point(12, 310);
-            button11.Name = "button11";
-            button11.Size = new Size(248, 55);
-            button11.TabIndex = 16;
-            button11.Text = "Customers";
-            button11.UseVisualStyleBackColor = true;
+            customers_btn.FlatAppearance.BorderSize = 0;
+            customers_btn.FlatAppearance.MouseDownBackColor = Color.Blue;
+            customers_btn.FlatAppearance.MouseOverBackColor = Color.Blue;
+            customers_btn.FlatStyle = FlatStyle.Flat;
+            customers_btn.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            customers_btn.ForeColor = Color.Blue;
+            customers_btn.Location = new Point(12, 310);
+            customers_btn.Name = "customers_btn";
+            customers_btn.Size = new Size(248, 55);
+            customers_btn.TabIndex = 16;
+            customers_btn.Text = "Customers";
+            customers_btn.UseVisualStyleBackColor = true;
+            customers_btn.Click += button11_Click;
             // 
             // button12
             // 
@@ -191,20 +194,21 @@
             button12.TabIndex = 15;
             button12.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // addProducts_btn
             // 
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatAppearance.MouseDownBackColor = Color.Blue;
-            button5.FlatAppearance.MouseOverBackColor = Color.Blue;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.Blue;
-            button5.Location = new Point(12, 241);
-            button5.Name = "button5";
-            button5.Size = new Size(248, 55);
-            button5.TabIndex = 14;
-            button5.Text = "Add Product";
-            button5.UseVisualStyleBackColor = true;
+            addProducts_btn.FlatAppearance.BorderSize = 0;
+            addProducts_btn.FlatAppearance.MouseDownBackColor = Color.Blue;
+            addProducts_btn.FlatAppearance.MouseOverBackColor = Color.Blue;
+            addProducts_btn.FlatStyle = FlatStyle.Flat;
+            addProducts_btn.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            addProducts_btn.ForeColor = Color.Blue;
+            addProducts_btn.Location = new Point(12, 241);
+            addProducts_btn.Name = "addProducts_btn";
+            addProducts_btn.Size = new Size(248, 55);
+            addProducts_btn.TabIndex = 14;
+            addProducts_btn.Text = "Add Product";
+            addProducts_btn.UseVisualStyleBackColor = true;
+            addProducts_btn.Click += addProducts_btn_Click;
             // 
             // button7
             // 
@@ -248,20 +252,21 @@
             button3.TabIndex = 8;
             button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // dashboard_btn
             // 
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.Blue;
-            button2.FlatAppearance.MouseOverBackColor = Color.Blue;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            button2.ForeColor = Color.Blue;
-            button2.Location = new Point(12, 179);
-            button2.Name = "button2";
-            button2.Size = new Size(248, 55);
-            button2.TabIndex = 2;
-            button2.Text = "Dashboard";
-            button2.UseVisualStyleBackColor = true;
+            dashboard_btn.FlatAppearance.BorderSize = 0;
+            dashboard_btn.FlatAppearance.MouseDownBackColor = Color.Blue;
+            dashboard_btn.FlatAppearance.MouseOverBackColor = Color.Blue;
+            dashboard_btn.FlatStyle = FlatStyle.Flat;
+            dashboard_btn.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            dashboard_btn.ForeColor = Color.Blue;
+            dashboard_btn.Location = new Point(12, 179);
+            dashboard_btn.Name = "dashboard_btn";
+            dashboard_btn.Size = new Size(248, 55);
+            dashboard_btn.TabIndex = 2;
+            dashboard_btn.Text = "Dashboard";
+            dashboard_btn.UseVisualStyleBackColor = true;
+            dashboard_btn.Click += button2_Click;
             // 
             // label2
             // 
@@ -270,14 +275,16 @@
             label2.ForeColor = Color.FromArgb(0, 0, 192);
             label2.Location = new Point(52, 130);
             label2.Name = "label2";
-            label2.Size = new Size(167, 28);
+            label2.Size = new Size(175, 28);
             label2.TabIndex = 2;
-            label2.Text = "Welcome! Admin";
+            label2.Text = "Welcome! Cashier";
+            label2.Click += label2_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.FromArgb(238, 245, 255);
             pictureBox1.ErrorImage = null;
+            pictureBox1.Image = Properties.Resources._2;
             pictureBox1.Location = new Point(93, 22);
             pictureBox1.Margin = new Padding(0);
             pictureBox1.Name = "pictureBox1";
@@ -288,14 +295,17 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(cashierOrder1);
             panel3.Controls.Add(adminDashborad1);
+            panel3.Controls.Add(adminAddProducts1);
+            panel3.Controls.Add(cashierCustomersForm1);
+            panel3.Controls.Add(cashierOrder1);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(283, 86);
             panel3.Name = "panel3";
             panel3.Size = new Size(1072, 715);
             panel3.TabIndex = 19;
             // 
+<<<<<<< Updated upstream
             // cashierOrder1
             // 
             cashierOrder1.Location = new Point(0, 0);
@@ -304,13 +314,35 @@
             cashierOrder1.TabIndex = 1;
             
             // 
+=======
+>>>>>>> Stashed changes
             // adminDashborad1
             // 
             adminDashborad1.Location = new Point(0, 0);
             adminDashborad1.Name = "adminDashborad1";
             adminDashborad1.Size = new Size(1282, 884);
-            adminDashborad1.TabIndex = 0;
-            adminDashborad1.Load += adminDashborad1_Load;
+            adminDashborad1.TabIndex = 4;
+            // 
+            // adminAddProducts1
+            // 
+            adminAddProducts1.Location = new Point(0, 0);
+            adminAddProducts1.Name = "adminAddProducts1";
+            adminAddProducts1.Size = new Size(1282, 884);
+            adminAddProducts1.TabIndex = 4;
+            // 
+            // cashierCustomersForm1
+            // 
+            cashierCustomersForm1.Location = new Point(0, 0);
+            cashierCustomersForm1.Name = "cashierCustomersForm1";
+            cashierCustomersForm1.Size = new Size(1384, 945);
+            cashierCustomersForm1.TabIndex = 4;
+            // 
+            // cashierOrder1
+            // 
+            cashierOrder1.Location = new Point(0, 0);
+            cashierOrder1.Name = "cashierOrder1";
+            cashierOrder1.Size = new Size(1282, 884);
+            cashierOrder1.TabIndex = 4;
             // 
             // CashierMainForm
             // 
@@ -340,18 +372,20 @@
         private Panel panel2;
         private Button logout_btn;
         private Button button10;
-        private Button button11;
+        private Button customers_btn;
         private Button button12;
-        private Button button5;
+        private Button addProducts_btn;
         private Button button7;
         private Button button4;
         private Button button3;
-        private Button button2;
+        private Button dashboard_btn;
         private Label label2;
         private PictureBox pictureBox1;
-        private Button Order;
+        private Button order_btn;
         private Panel panel3;
         private AdminDashborad adminDashborad1;
+        private AdminAddProducts adminAddProducts1;
+        private CashierCustomersForm cashierCustomersForm1;
         private CashierOrder cashierOrder1;
     }
 }

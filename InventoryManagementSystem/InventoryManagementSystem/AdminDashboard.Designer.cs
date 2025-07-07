@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashborad));
-            dataGridView1 = new DataGridView();
             panel4 = new Panel();
             label6 = new Label();
-            label7 = new Label();
+            dashboard_totalIncome = new Label();
             pictureBox4 = new PictureBox();
             panel6 = new Panel();
+            dataGridView2 = new DataGridView();
             label1 = new Label();
-            label2 = new Label();
+            dashboard_AU = new Label();
             pictureBox1 = new PictureBox();
             panel5 = new Panel();
             label4 = new Label();
-            label5 = new Label();
+            dashboard_TI = new Label();
             pictureBox3 = new PictureBox();
             label3 = new Label();
             label9 = new Label();
-            label8 = new Label();
+            dashboard_AC = new Label();
             pictureBox2 = new PictureBox();
             panel3 = new Panel();
             panel2 = new Panel();
             panel1 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -62,20 +62,11 @@
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(30, 82);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(929, 268);
-            dataGridView1.TabIndex = 0;
-            // 
             // panel4
             // 
             panel4.BackColor = Color.CornflowerBlue;
             panel4.Controls.Add(label6);
-            panel4.Controls.Add(label7);
+            panel4.Controls.Add(dashboard_totalIncome);
             panel4.Controls.Add(pictureBox4);
             panel4.Location = new Point(755, 32);
             panel4.Name = "panel4";
@@ -91,14 +82,14 @@
             label6.TabIndex = 6;
             label6.Text = "Total Income";
             // 
-            // label7
+            // dashboard_totalIncome
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(144, 27);
-            label7.Name = "label7";
-            label7.Size = new Size(44, 20);
-            label7.TabIndex = 5;
-            label7.Text = "$0.00";
+            dashboard_totalIncome.AutoSize = true;
+            dashboard_totalIncome.Location = new Point(144, 27);
+            dashboard_totalIncome.Name = "dashboard_totalIncome";
+            dashboard_totalIncome.Size = new Size(44, 20);
+            dashboard_totalIncome.TabIndex = 5;
+            dashboard_totalIncome.Text = "$0.00";
             // 
             // pictureBox4
             // 
@@ -115,12 +106,22 @@
             // panel6
             // 
             panel6.BackColor = Color.White;
+            panel6.Controls.Add(dataGridView2);
             panel6.Controls.Add(label1);
-            panel6.Controls.Add(dataGridView1);
             panel6.Location = new Point(7, 295);
             panel6.Name = "panel6";
             panel6.Size = new Size(1002, 389);
             panel6.TabIndex = 6;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(15, 136);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 51;
+            dataGridView2.Size = new Size(967, 585);
+            dataGridView2.TabIndex = 2;
             // 
             // label1
             // 
@@ -128,18 +129,18 @@
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(326, 29);
             label1.Name = "label1";
-            label1.Size = new Size(205, 28);
+            label1.Size = new Size(216, 28);
             label1.TabIndex = 1;
-            label1.Text = "All Today's Cutmoter ";
+            label1.Text = "All Today's Customers ";
             // 
-            // label2
+            // dashboard_AU
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(126, 28);
-            label2.Name = "label2";
-            label2.Size = new Size(17, 20);
-            label2.TabIndex = 2;
-            label2.Text = "0";
+            dashboard_AU.AutoSize = true;
+            dashboard_AU.Location = new Point(126, 28);
+            dashboard_AU.Name = "dashboard_AU";
+            dashboard_AU.Size = new Size(17, 20);
+            dashboard_AU.TabIndex = 2;
+            dashboard_AU.Text = "0";
             // 
             // pictureBox1
             // 
@@ -157,7 +158,7 @@
             // 
             panel5.BackColor = Color.CornflowerBlue;
             panel5.Controls.Add(label4);
-            panel5.Controls.Add(label5);
+            panel5.Controls.Add(dashboard_TI);
             panel5.Controls.Add(pictureBox3);
             panel5.Location = new Point(508, 32);
             panel5.Name = "panel5";
@@ -173,14 +174,14 @@
             label4.TabIndex = 6;
             label4.Text = "Today's Income";
             // 
-            // label5
+            // dashboard_TI
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(128, 27);
-            label5.Name = "label5";
-            label5.Size = new Size(44, 20);
-            label5.TabIndex = 5;
-            label5.Text = "$0.00";
+            dashboard_TI.AutoSize = true;
+            dashboard_TI.Location = new Point(128, 27);
+            dashboard_TI.Name = "dashboard_TI";
+            dashboard_TI.Size = new Size(44, 20);
+            dashboard_TI.TabIndex = 5;
+            dashboard_TI.Text = "$0.00";
             // 
             // pictureBox3
             // 
@@ -213,14 +214,14 @@
             label9.Text = "All Customer";
             label9.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label8
+            // dashboard_AC
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(125, 28);
-            label8.Name = "label8";
-            label8.Size = new Size(17, 20);
-            label8.TabIndex = 3;
-            label8.Text = "0";
+            dashboard_AC.AutoSize = true;
+            dashboard_AC.Location = new Point(125, 28);
+            dashboard_AC.Name = "dashboard_AC";
+            dashboard_AC.Size = new Size(17, 20);
+            dashboard_AC.TabIndex = 3;
+            dashboard_AC.Text = "0";
             // 
             // pictureBox2
             // 
@@ -238,7 +239,7 @@
             // 
             panel3.BackColor = Color.CornflowerBlue;
             panel3.Controls.Add(label9);
-            panel3.Controls.Add(label8);
+            panel3.Controls.Add(dashboard_AC);
             panel3.Controls.Add(pictureBox2);
             panel3.Location = new Point(263, 32);
             panel3.Name = "panel3";
@@ -249,7 +250,7 @@
             // 
             panel2.BackColor = Color.CornflowerBlue;
             panel2.Controls.Add(label3);
-            panel2.Controls.Add(label2);
+            panel2.Controls.Add(dashboard_AU);
             panel2.Controls.Add(pictureBox1);
             panel2.Location = new Point(15, 32);
             panel2.Name = "panel2";
@@ -277,12 +278,12 @@
             Name = "AdminDashborad";
             Size = new Size(1026, 707);
             Load += AdminDashborad_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
@@ -297,26 +298,25 @@
         }
 
         #endregion
-
-        private DataGridView dataGridView1;
         private Panel panel4;
         private Label label6;
-        private Label label7;
+        private Label dashboard_totalIncome;
         private PictureBox pictureBox4;
         private Panel panel6;
         private Label label1;
-        private Label label2;
+        private Label dashboard_AU;
         private PictureBox pictureBox1;
         private Panel panel5;
         private Label label4;
-        private Label label5;
+        private Label dashboard_TI;
         private PictureBox pictureBox3;
         private Label label3;
         private Label label9;
-        private Label label8;
+        private Label dashboard_AC;
         private PictureBox pictureBox2;
         private Panel panel3;
         private Panel panel2;
         private Panel panel1;
+        private DataGridView dataGridView2;
     }
 }

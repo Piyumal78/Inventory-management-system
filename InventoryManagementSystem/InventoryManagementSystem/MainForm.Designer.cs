@@ -33,25 +33,25 @@
             label1 = new Label();
             close = new Button();
             panel2 = new Panel();
+            adminDashborad1 = new AdminDashborad();
             logoutbtn = new Button();
             button10 = new Button();
-            button11 = new Button();
+            customers_btn = new Button();
             button12 = new Button();
-            button5 = new Button();
+            addProducts_btn = new Button();
             button7 = new Button();
-            button8 = new Button();
-            button6 = new Button();
+            addCategories_btn = new Button();
+            addUsers_btn = new Button();
             button4 = new Button();
             button3 = new Button();
-            button2 = new Button();
+            dashboard_btn = new Button();
             label2 = new Label();
             pictureBox1 = new PictureBox();
             panel3 = new Panel();
-            adminAddProducts1 = new AdminAddProducts();
             adminAddCategories1 = new AdminAddCategories();
-            adminAddUser2 = new AdminAddUser();
+            adminAddProducts1 = new AdminAddProducts();
+            cashierCustomersForm1 = new CashierCustomersForm();
             adminAddUser1 = new AdminAddUser();
-            adminDashborad1 = new AdminDashborad();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -102,17 +102,18 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(134, 182, 246);
+            panel2.Controls.Add(adminDashborad1);
             panel2.Controls.Add(logoutbtn);
             panel2.Controls.Add(button10);
-            panel2.Controls.Add(button11);
+            panel2.Controls.Add(customers_btn);
             panel2.Controls.Add(button12);
-            panel2.Controls.Add(button5);
+            panel2.Controls.Add(addProducts_btn);
             panel2.Controls.Add(button7);
-            panel2.Controls.Add(button8);
-            panel2.Controls.Add(button6);
+            panel2.Controls.Add(addCategories_btn);
+            panel2.Controls.Add(addUsers_btn);
             panel2.Controls.Add(button4);
             panel2.Controls.Add(button3);
-            panel2.Controls.Add(button2);
+            panel2.Controls.Add(dashboard_btn);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Left;
@@ -120,6 +121,13 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(283, 709);
             panel2.TabIndex = 1;
+            // 
+            // adminDashborad1
+            // 
+            adminDashborad1.Location = new Point(24, 152);
+            adminDashborad1.Name = "adminDashborad1";
+            adminDashborad1.Size = new Size(1282, 884);
+            adminDashborad1.TabIndex = 4;
             // 
             // logoutbtn
             // 
@@ -152,20 +160,21 @@
             button10.TabIndex = 17;
             button10.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // customers_btn
             // 
-            button11.FlatAppearance.BorderSize = 0;
-            button11.FlatAppearance.MouseDownBackColor = Color.Blue;
-            button11.FlatAppearance.MouseOverBackColor = Color.Blue;
-            button11.FlatStyle = FlatStyle.Flat;
-            button11.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            button11.ForeColor = Color.Blue;
-            button11.Location = new Point(12, 412);
-            button11.Name = "button11";
-            button11.Size = new Size(248, 55);
-            button11.TabIndex = 16;
-            button11.Text = "Customers";
-            button11.UseVisualStyleBackColor = true;
+            customers_btn.FlatAppearance.BorderSize = 0;
+            customers_btn.FlatAppearance.MouseDownBackColor = Color.Blue;
+            customers_btn.FlatAppearance.MouseOverBackColor = Color.Blue;
+            customers_btn.FlatStyle = FlatStyle.Flat;
+            customers_btn.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            customers_btn.ForeColor = Color.Blue;
+            customers_btn.Location = new Point(12, 412);
+            customers_btn.Name = "customers_btn";
+            customers_btn.Size = new Size(248, 55);
+            customers_btn.TabIndex = 16;
+            customers_btn.Text = "Customers";
+            customers_btn.UseVisualStyleBackColor = true;
+            customers_btn.Click += customers_btn_Click;
             // 
             // button12
             // 
@@ -181,20 +190,21 @@
             button12.TabIndex = 15;
             button12.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // addProducts_btn
             // 
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatAppearance.MouseDownBackColor = Color.Blue;
-            button5.FlatAppearance.MouseOverBackColor = Color.Blue;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.Blue;
-            button5.Location = new Point(12, 353);
-            button5.Name = "button5";
-            button5.Size = new Size(248, 55);
-            button5.TabIndex = 14;
-            button5.Text = "Add Product";
-            button5.UseVisualStyleBackColor = true;
+            addProducts_btn.FlatAppearance.BorderSize = 0;
+            addProducts_btn.FlatAppearance.MouseDownBackColor = Color.Blue;
+            addProducts_btn.FlatAppearance.MouseOverBackColor = Color.Blue;
+            addProducts_btn.FlatStyle = FlatStyle.Flat;
+            addProducts_btn.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            addProducts_btn.ForeColor = Color.Blue;
+            addProducts_btn.Location = new Point(12, 353);
+            addProducts_btn.Name = "addProducts_btn";
+            addProducts_btn.Size = new Size(248, 55);
+            addProducts_btn.TabIndex = 14;
+            addProducts_btn.Text = "Add Product";
+            addProducts_btn.UseVisualStyleBackColor = true;
+            addProducts_btn.Click += addProducts_btn_Click;
             // 
             // button7
             // 
@@ -209,36 +219,39 @@
             button7.Size = new Size(248, 55);
             button7.TabIndex = 13;
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
-            // button8
+            // addCategories_btn
             // 
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatAppearance.MouseDownBackColor = Color.Blue;
-            button8.FlatAppearance.MouseOverBackColor = Color.Blue;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            button8.ForeColor = Color.Blue;
-            button8.Location = new Point(12, 292);
-            button8.Name = "button8";
-            button8.Size = new Size(248, 55);
-            button8.TabIndex = 12;
-            button8.Text = "Add Categories";
-            button8.UseVisualStyleBackColor = true;
+            addCategories_btn.FlatAppearance.BorderSize = 0;
+            addCategories_btn.FlatAppearance.MouseDownBackColor = Color.Blue;
+            addCategories_btn.FlatAppearance.MouseOverBackColor = Color.Blue;
+            addCategories_btn.FlatStyle = FlatStyle.Flat;
+            addCategories_btn.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            addCategories_btn.ForeColor = Color.Blue;
+            addCategories_btn.Location = new Point(12, 292);
+            addCategories_btn.Name = "addCategories_btn";
+            addCategories_btn.Size = new Size(248, 55);
+            addCategories_btn.TabIndex = 12;
+            addCategories_btn.Text = "Add Categories";
+            addCategories_btn.UseVisualStyleBackColor = true;
+            addCategories_btn.Click += addCategories_btn_Click;
             // 
-            // button6
+            // addUsers_btn
             // 
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatAppearance.MouseDownBackColor = Color.Blue;
-            button6.FlatAppearance.MouseOverBackColor = Color.Blue;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            button6.ForeColor = Color.Blue;
-            button6.Location = new Point(12, 231);
-            button6.Name = "button6";
-            button6.Size = new Size(248, 55);
-            button6.TabIndex = 11;
-            button6.Text = "Add Users";
-            button6.UseVisualStyleBackColor = true;
+            addUsers_btn.FlatAppearance.BorderSize = 0;
+            addUsers_btn.FlatAppearance.MouseDownBackColor = Color.Blue;
+            addUsers_btn.FlatAppearance.MouseOverBackColor = Color.Blue;
+            addUsers_btn.FlatStyle = FlatStyle.Flat;
+            addUsers_btn.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            addUsers_btn.ForeColor = Color.Blue;
+            addUsers_btn.Location = new Point(12, 240);
+            addUsers_btn.Name = "addUsers_btn";
+            addUsers_btn.Size = new Size(248, 55);
+            addUsers_btn.TabIndex = 11;
+            addUsers_btn.Text = "Add Users";
+            addUsers_btn.UseVisualStyleBackColor = true;
+            addUsers_btn.Click += button6_Click;
             // 
             // button4
             // 
@@ -268,21 +281,21 @@
             button3.TabIndex = 8;
             button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // dashboard_btn
             // 
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.Blue;
-            button2.FlatAppearance.MouseOverBackColor = Color.Blue;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            button2.ForeColor = Color.Blue;
-            button2.Location = new Point(12, 179);
-            button2.Name = "button2";
-            button2.Size = new Size(248, 55);
-            button2.TabIndex = 2;
-            button2.Text = "Dashboard";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            dashboard_btn.FlatAppearance.BorderSize = 0;
+            dashboard_btn.FlatAppearance.MouseDownBackColor = Color.Blue;
+            dashboard_btn.FlatAppearance.MouseOverBackColor = Color.Blue;
+            dashboard_btn.FlatStyle = FlatStyle.Flat;
+            dashboard_btn.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            dashboard_btn.ForeColor = Color.Blue;
+            dashboard_btn.Location = new Point(12, 179);
+            dashboard_btn.Name = "dashboard_btn";
+            dashboard_btn.Size = new Size(248, 55);
+            dashboard_btn.TabIndex = 2;
+            dashboard_btn.Text = "Dashboard";
+            dashboard_btn.UseVisualStyleBackColor = true;
+            dashboard_btn.Click += button2_Click;
             // 
             // label2
             // 
@@ -310,17 +323,23 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(adminAddProducts1);
-            panel3.Controls.Add(adminAddCategories1);
-            panel3.Controls.Add(adminAddUser2);
             panel3.Controls.Add(adminAddUser1);
-            panel3.Controls.Add(adminDashborad1);
+            panel3.Controls.Add(adminAddCategories1);
+            panel3.Controls.Add(adminAddProducts1);
+            panel3.Controls.Add(cashierCustomersForm1);
             panel3.Dock = DockStyle.Fill;
             panel3.ForeColor = Color.Black;
             panel3.Location = new Point(283, 86);
             panel3.Name = "panel3";
             panel3.Size = new Size(1026, 709);
             panel3.TabIndex = 2;
+            // 
+            // adminAddCategories1
+            // 
+            adminAddCategories1.Location = new Point(0, 0);
+            adminAddCategories1.Name = "adminAddCategories1";
+            adminAddCategories1.Size = new Size(1282, 884);
+            adminAddCategories1.TabIndex = 4;
             // 
             // adminAddProducts1
             // 
@@ -329,34 +348,20 @@
             adminAddProducts1.Size = new Size(1282, 884);
             adminAddProducts1.TabIndex = 4;
             // 
-            // adminAddCategories1
+            // cashierCustomersForm1
             // 
-            adminAddCategories1.Location = new Point(0, 0);
-            adminAddCategories1.Name = "adminAddCategories1";
-            adminAddCategories1.Size = new Size(1282, 884);
-            adminAddCategories1.TabIndex = 3;
-            // 
-            // adminAddUser2
-            // 
-            adminAddUser2.Location = new Point(258, 231);
-            adminAddUser2.Name = "adminAddUser2";
-            adminAddUser2.Size = new Size(1282, 884);
-            adminAddUser2.TabIndex = 2;
+            cashierCustomersForm1.Location = new Point(0, 0);
+            cashierCustomersForm1.Name = "cashierCustomersForm1";
+            cashierCustomersForm1.Size = new Size(1384, 945);
+            cashierCustomersForm1.TabIndex = 0;
             // 
             // adminAddUser1
             // 
-            adminAddUser1.Location = new Point(0, -4);
+            adminAddUser1.Location = new Point(3, 0);
             adminAddUser1.Name = "adminAddUser1";
-            adminAddUser1.Size = new Size(1036, 713);
-            adminAddUser1.TabIndex = 1;
-            adminAddUser1.Load += adminAddUser1_Load_1;
-            // 
-            // adminDashborad1
-            // 
-            adminDashborad1.Location = new Point(0, 0);
-            adminDashborad1.Name = "adminDashborad1";
-            adminDashborad1.Size = new Size(1023, 701);
-            adminDashborad1.TabIndex = 0;
+            adminAddUser1.Size = new Size(1282, 884);
+            adminAddUser1.TabIndex = 4;
+            adminAddUser1.Load += adminAddUser1_Load_3;
             // 
             // MainForm
             // 
@@ -389,23 +394,23 @@
         private Panel panel2;
         private PictureBox pictureBox1;
         private Label label2;
-        private Button button2;
-        private Button button5;
+        private Button dashboard_btn;
+        private Button addProducts_btn;
         private Button button7;
-        private Button button8;
-        private Button button6;
+        private Button addCategories_btn;
+        private Button addUsers_btn;
         private Button button4;
         private Button button3;
         private Button logoutbtn;
         private Button button10;
-        private Button button11;
+        private Button customers_btn;
         private Button button12;
         private Button close;
         private Panel panel3;
-        private AdminDashborad adminDashborad1;
-        private AdminAddUser adminAddUser2;
-        private AdminAddUser adminAddUser1;
         private AdminAddCategories adminAddCategories1;
         private AdminAddProducts adminAddProducts1;
+        private CashierCustomersForm cashierCustomersForm1;
+        private AdminDashborad adminDashborad1;
+        private AdminAddUser adminAddUser1;
     }
 }

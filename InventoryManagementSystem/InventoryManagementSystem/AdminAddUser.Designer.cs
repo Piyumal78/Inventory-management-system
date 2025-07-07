@@ -244,6 +244,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(605, 560);
             dataGridView1.TabIndex = 2;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label5
             // 
@@ -264,6 +265,7 @@
             Controls.Add(panel2);
             Name = "AdminAddUser";
             Size = new Size(1026, 707);
+            Load += AdminAddUser_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

@@ -22,6 +22,18 @@ namespace InventoryManagementSystem
             displayCategories();
             displayAllProducts();
         }
+
+
+        public void refreshData()
+        {
+            if (InvokeRequired)
+            {
+                Invoke((MethodInvoker)refreshData);
+                return;
+            }
+            displayCategories();
+            displayAllProducts();
+        }
         public void displayAllProducts()
         {
             AddProductsData apData = new AddProductsData();
@@ -278,58 +290,58 @@ namespace InventoryManagementSystem
                             connect.Open();
 
                             //string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-                                string updateData = "UPDATE products SET prod_id=@prodID,prod_name = @prodName" +
-                                   ", category = @cat, price = @price, stock = @stock,status = @status WHERE id = @id";
+                            string updateData = "UPDATE products SET prod_id=@prodID,prod_name = @prodName" +
+                               ", category = @cat, price = @price, stock = @stock,status = @status WHERE id = @id";
 
-                                using (SqlCommand updateCmd = new SqlCommand(updateData, connect))
-                                {
-                                    updateCmd.Parameters.AddWithValue("@prodID", addProducts_prodID.Text.Trim());
-                                    updateCmd.Parameters.AddWithValue("@prodName", addProducts_prodName.Text.Trim());
-                                    updateCmd.Parameters.AddWithValue("@cat", addProducts_category.SelectedItem);
-                                    updateCmd.Parameters.AddWithValue("@price", addProducts_price.Text.Trim());
-                                    updateCmd.Parameters.AddWithValue("@stock", addProducts_stock.Text.Trim());
-                                    updateCmd.Parameters.AddWithValue("@status", addProducts_status.SelectedItem);
-                                    updateCmd.Parameters.AddWithValue("@id", getID);
+                            using (SqlCommand updateCmd = new SqlCommand(updateData, connect))
+                            {
+                                updateCmd.Parameters.AddWithValue("@prodID", addProducts_prodID.Text.Trim());
+                                updateCmd.Parameters.AddWithValue("@prodName", addProducts_prodName.Text.Trim());
+                                updateCmd.Parameters.AddWithValue("@cat", addProducts_category.SelectedItem);
+                                updateCmd.Parameters.AddWithValue("@price", addProducts_price.Text.Trim());
+                                updateCmd.Parameters.AddWithValue("@stock", addProducts_stock.Text.Trim());
+                                updateCmd.Parameters.AddWithValue("@status", addProducts_status.SelectedItem);
+                                updateCmd.Parameters.AddWithValue("@id", getID);
 
-                                    //string relativePath = @"..\..\..\images\products\" + addProducts_prodID.Text.Trim() + ".jpg";
-                                    //string path = Path.Combine(baseDirectory, relativePath);
-                                    //string directoryPath = Path.GetDirectoryName(path);
-
-
-                                    //if (!Directory.Exists(directoryPath))
-                                    //{
-                                    //    Directory.CreateDirectory(directoryPath);
-                                    //}
-                                    //if (addProducts_imageView.Image != null)
-                                    //{
-                                    //    File.Copy(addProducts_imageView.Image.Dispose();
-                                    //}
-                                    //if (File.Exists(path))
-                                    //{
-                                    //    try
-                                    //    {
-                                    //        using (FileStream fs = new FileStream(path, File.Open.FileAccess.ReadWrite, FileShare.None))
-                                    //        {
-
-                                    //        }
-                                    //        File.Delete(path);
-                                    //    }
-                                    //    catch (IOException ex)
-                                    //    {
-                                    //        MessageBox.Show("Error saving image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    //        return;
-                                    //    }
-                                    //}
-
-                                    //updateCmd.Parameters.AddWithValue("@path", path);
+                                //string relativePath = @"..\..\..\images\products\" + addProducts_prodID.Text.Trim() + ".jpg";
+                                //string path = Path.Combine(baseDirectory, relativePath);
+                                //string directoryPath = Path.GetDirectoryName(path);
 
 
+                                //if (!Directory.Exists(directoryPath))
+                                //{
+                                //    Directory.CreateDirectory(directoryPath);
+                                //}
+                                //if (addProducts_imageView.Image != null)
+                                //{
+                                //    File.Copy(addProducts_imageView.Image.Dispose();
+                                //}
+                                //if (File.Exists(path))
+                                //{
+                                //    try
+                                //    {
+                                //        using (FileStream fs = new FileStream(path, File.Open.FileAccess.ReadWrite, FileShare.None))
+                                //        {
+
+                                //        }
+                                //        File.Delete(path);
+                                //    }
+                                //    catch (IOException ex)
+                                //    {
+                                //        MessageBox.Show("Error saving image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                //        return;
+                                //    }
+                                //}
+
+                                //updateCmd.Parameters.AddWithValue("@path", path);
 
 
-                                    updateCmd.ExecuteNonQuery();
 
-                                    clearFields();
-                                    displayAllProducts();
+
+                                updateCmd.ExecuteNonQuery();
+
+                                clearFields();
+                                displayAllProducts();
 
 
                                 MessageBox.Show("Product updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -337,7 +349,7 @@ namespace InventoryManagementSystem
 
                             }
                         }
-                        
+
                         catch (Exception ex)
                         {
                             MessageBox.Show("Error updating product: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -375,7 +387,7 @@ namespace InventoryManagementSystem
                             if (connect.State != ConnectionState.Open)
                             {
                                 connect.Open();
-                            
+
                                 string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
                                 string deleteData = "DELETE FROM products WHERE id=@id";
 
@@ -411,5 +423,9 @@ namespace InventoryManagementSystem
 
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
