@@ -8,7 +8,11 @@ namespace InventoryManagementSystem
     public partial class AdminAddUser : UserControl
     {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         private SqlConnection connect = new SqlConnection(@"Data Source=PIYUMAL\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False");
+=======
+        private SqlConnection connect = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Inventory;Integrated Security=True");
+>>>>>>> Stashed changes
 =======
         private SqlConnection connect = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Inventory;Integrated Security=True");
 >>>>>>> Stashed changes

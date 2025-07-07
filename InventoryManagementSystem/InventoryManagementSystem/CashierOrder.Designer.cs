@@ -86,7 +86,10 @@
             panel1.Size = new Size(675, 345);
             panel1.TabIndex = 0;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             panel1.Paint += panel1_Paint;
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
             // 
@@ -200,6 +203,9 @@
             label6.Text = "Proce($):";
 =======
             label6.Text = "Price($):";
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             // 
             // label8
@@ -222,7 +228,10 @@
             cashierOrder_prodName.TabIndex = 1;
             cashierOrder_prodName.Text = "Category:";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             cashierOrder_prodName.Click += cashierOrder_prodName_Click;
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
             // 
@@ -315,6 +324,10 @@
             cashierOrder_receipt.Text = "Receipt";
             cashierOrder_receipt.UseVisualStyleBackColor = false;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+            cashierOrder_receipt.Click += cashierOrder_receipt_Click;
+>>>>>>> Stashed changes
 =======
             cashierOrder_receipt.Click += cashierOrder_receipt_Click;
 >>>>>>> Stashed changes
@@ -371,7 +384,10 @@
             label9.TabIndex = 1;
             label9.Text = "Total Price($):";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             label9.Click += label9_Click;
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
             // 

@@ -42,6 +42,7 @@ namespace InventoryManagementSystem
                 using (SqlCommand cmd = new SqlCommand(selectData, connect))
                 {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                     connect.Open();
                 }
                 catch (Exception ex)
@@ -55,6 +56,8 @@ namespace InventoryManagementSystem
             }
             
 =======
+=======
+>>>>>>> Stashed changes
                     cmd.Parameters.AddWithValue("@cID", customerId);
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {

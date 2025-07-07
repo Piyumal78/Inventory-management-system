@@ -306,6 +306,7 @@
             panel3.TabIndex = 19;
             // 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             // cashierOrder1
             // 
             cashierOrder1.Location = new Point(0, 0);
@@ -314,6 +315,8 @@
             cashierOrder1.TabIndex = 1;
             
             // 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
             // adminDashborad1

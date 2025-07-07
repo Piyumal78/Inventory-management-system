@@ -35,6 +35,24 @@ namespace InventoryManagementSystem
             displayAllAvaliableProducts();
             displayAllCategories();
             IDGenerator();
+<<<<<<< Updated upstream
+            displayOrders();
+        }
+
+        public void refreshData()
+        {
+            if (InvokeRequired)
+            {
+                Invoke((MethodInvoker)refreshData);
+                return;
+            }
+            
+            displayAllAvaliableProducts();
+            displayAllCategories();
+            IDGenerator();
+            displayOrders();
+>>>>>>> Stashed changes
+=======
             displayOrders();
         }
 
@@ -81,6 +99,9 @@ namespace InventoryManagementSystem
             }
             totalPrice = sum;
             cashierOrder_totalPrice.Text = totalPrice.ToString("0.00");
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }
 
@@ -357,6 +378,9 @@ namespace InventoryManagementSystem
                                 cashierOrder_prodName.Text = "";
                                 cashierOrder_price.Text = "";
                                 unitPrice = 0;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                             }
                         }
@@ -391,6 +415,9 @@ namespace InventoryManagementSystem
         private void cashierOrder_qty_ValueChanged(object sender, EventArgs e)
         {
             cashierOrder_price.Text = (unitPrice * (float)cashierOrder_qty.Value).ToString("0.00");
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }
 
@@ -481,6 +508,9 @@ namespace InventoryManagementSystem
 
 =======
             displayOrders();
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }
 
@@ -519,7 +549,10 @@ namespace InventoryManagementSystem
                 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
         private void cashierOrder_removeBtn_Click_1(object sender, EventArgs e)
         {
             if (prodID == 0)
@@ -568,7 +601,10 @@ namespace InventoryManagementSystem
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
         private void cashierOrder_clearBtn_Click_1(object sender, EventArgs e)
         {
             clearFields();
@@ -774,6 +810,9 @@ namespace InventoryManagementSystem
         }
 
         
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 }

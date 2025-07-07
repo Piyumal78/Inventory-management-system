@@ -109,7 +109,10 @@ D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManage
 D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0-windows\InventoryManagementSystem.CashierOrder.resources
 D:\Project\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0-windows\InventoryManagementSystem.CashierMainForm.resources
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 C:\Users\HESHAN\Desktop\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\bin\Debug\net9.0-windows\InventoryManagementSystem.exe
 C:\Users\HESHAN\Desktop\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\bin\Debug\net9.0-windows\InventoryManagementSystem.dll
 C:\Users\HESHAN\Desktop\Inventory-management-system\InventoryManagementSystem\InventoryManagementSystem\bin\Debug\net9.0-windows\runtimes\win-x64\native\sni.dll
