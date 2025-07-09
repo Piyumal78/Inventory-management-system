@@ -293,7 +293,7 @@ namespace InventoryManagementSystem
                         
                         displayOrders();
 
-                        /
+                        
                         cashierOrder_prodID.SelectedIndex = -1;
                         cashierOrder_prodName.Text = "";
                         cashierOrder_price.Text = "";
