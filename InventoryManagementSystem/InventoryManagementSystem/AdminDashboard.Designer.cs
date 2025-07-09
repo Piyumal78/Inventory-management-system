@@ -72,6 +72,7 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(227, 198);
             panel4.TabIndex = 3;
+            panel4.Paint += panel4_Paint;
             // 
             // label6
             // 
@@ -122,6 +123,7 @@
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.Size = new Size(967, 585);
             dataGridView2.TabIndex = 2;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
             // label1
             // 
@@ -182,6 +184,7 @@
             dashboard_TI.Size = new Size(44, 20);
             dashboard_TI.TabIndex = 5;
             dashboard_TI.Text = "$0.00";
+            dashboard_TI.Click += dashboard_TI_Click;
             // 
             // pictureBox3
             // 

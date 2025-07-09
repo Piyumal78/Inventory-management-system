@@ -25,7 +25,7 @@ namespace InventoryManagementSystem
                 Invoke((MethodInvoker)refreshData);
                 return;
             }
-            InitializeComponent();
+            
             displayAllCustomersData();
         }
 

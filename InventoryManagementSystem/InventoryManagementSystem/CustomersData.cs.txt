@@ -8,7 +8,7 @@ namespace InventoryManagementSystem
     class CustomersData
     {
         // SQL connection string
-      SqlConnection connect = new SqlConnection(@"Data Source=PIYUMAL\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False");
+      SqlConnection connect = new SqlConnection(@"Data Source=PIYUMAL\SQLEXPRESS;Initial Catalog=Inventory_managment;Integrated Security=True;Encrypt=False");
 
         // Properties matching the database columns
         public string CustomerID { get; set; }

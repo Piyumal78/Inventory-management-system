@@ -8,7 +8,7 @@ namespace InventoryManagementSystem
     public partial class AdminAddCategories : UserControl
     {
         // Connection string to the database
-        SqlConnection connect = new SqlConnection(@"Data Source=PIYUMAL\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False");
+        SqlConnection connect = new SqlConnection(@"Data Source=DESKTOP-RN2T9CM\SQLEXPRESS;Initial Catalog=Inventory_managment;Integrated Security=True");
 
         public AdminAddCategories()
         {
@@ -23,7 +23,7 @@ namespace InventoryManagementSystem
                 Invoke((MethodInvoker)refreshData);
                 return;
             }
-            InitializeComponent();
+            
             displayAllCategoriesData();
         }
 
@@ -139,7 +139,7 @@ namespace InventoryManagementSystem
 
         private void addCategories_updateBtn_Click(object sender, EventArgs e)
         {
-            if (addCategories_addBtn.Text == "")
+            if (addCategories_category.Text.Trim() == "")
             {
                 MessageBox.Show("Please enter a category name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -152,7 +152,6 @@ namespace InventoryManagementSystem
                     {
                         try
                         {
-
                             string updateData = "UPDATE categories SET category = @cat WHERE id=@id";
                             using (SqlCommand updateCmd = new SqlCommand(updateData, connect))
                             {
@@ -160,12 +159,10 @@ namespace InventoryManagementSystem
                                 updateCmd.Parameters.AddWithValue("@id", getID);
 
                                 updateCmd.ExecuteNonQuery();
-                                clearFields();  // Clear the input fields after successful insertion
+                                clearFields();  // Clear the input fields after successful update
                                 displayAllCategoriesData();
-                                MessageBox.Show("Category update successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Category updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
-
-
                         }
                         catch (Exception ex)
                         {
@@ -179,14 +176,13 @@ namespace InventoryManagementSystem
                             }
                         }
                     }
-
                 }
             }
         }
 
         private void addCategories_removeBtn_Click(object sender, EventArgs e)
         {
-            if (addCategories_addBtn.Text == "")
+            if (addCategories_category.Text.Trim() == "")
             {
                 MessageBox.Show("Please enter a category name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

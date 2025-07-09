@@ -33,7 +33,6 @@
             label1 = new Label();
             close = new Button();
             panel2 = new Panel();
-            adminDashborad1 = new AdminDashborad();
             logoutbtn = new Button();
             button10 = new Button();
             customers_btn = new Button();
@@ -47,11 +46,12 @@
             dashboard_btn = new Button();
             label2 = new Label();
             pictureBox1 = new PictureBox();
+            adminDashborad1 = new AdminDashborad();
             panel3 = new Panel();
+            adminAddUser1 = new AdminAddUser();
             adminAddCategories1 = new AdminAddCategories();
             adminAddProducts1 = new AdminAddProducts();
             cashierCustomersForm1 = new CashierCustomersForm();
-            adminAddUser1 = new AdminAddUser();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -102,7 +102,6 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(134, 182, 246);
-            panel2.Controls.Add(adminDashborad1);
             panel2.Controls.Add(logoutbtn);
             panel2.Controls.Add(button10);
             panel2.Controls.Add(customers_btn);
@@ -121,13 +120,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(283, 709);
             panel2.TabIndex = 1;
-            // 
-            // adminDashborad1
-            // 
-            adminDashborad1.Location = new Point(24, 152);
-            adminDashborad1.Name = "adminDashborad1";
-            adminDashborad1.Size = new Size(1282, 884);
-            adminDashborad1.TabIndex = 4;
             // 
             // logoutbtn
             // 
@@ -154,11 +146,13 @@
             button10.FlatStyle = FlatStyle.Flat;
             button10.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button10.ForeColor = Color.Blue;
-            button10.Location = new Point(12, 453);
+            button10.Location = new Point(12, 464);
             button10.Name = "button10";
             button10.Size = new Size(248, 55);
             button10.TabIndex = 17;
+            button10.Text = "StockReport";
             button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
             // 
             // customers_btn
             // 
@@ -307,6 +301,7 @@
             label2.Size = new Size(167, 28);
             label2.TabIndex = 2;
             label2.Text = "Welcome! Admin";
+            label2.Click += label2_Click;
             // 
             // pictureBox1
             // 
@@ -321,8 +316,16 @@
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
+            // adminDashborad1
+            // 
+            adminDashborad1.Location = new Point(0, 0);
+            adminDashborad1.Name = "adminDashborad1";
+            adminDashborad1.Size = new Size(1282, 884);
+            adminDashborad1.TabIndex = 4;
+            // 
             // panel3
             // 
+            panel3.Controls.Add(adminDashborad1);
             panel3.Controls.Add(adminAddUser1);
             panel3.Controls.Add(adminAddCategories1);
             panel3.Controls.Add(adminAddProducts1);
@@ -333,6 +336,14 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(1026, 709);
             panel3.TabIndex = 2;
+            // 
+            // adminAddUser1
+            // 
+            adminAddUser1.Location = new Point(0, 0);
+            adminAddUser1.Name = "adminAddUser1";
+            adminAddUser1.Size = new Size(1282, 884);
+            adminAddUser1.TabIndex = 4;
+            adminAddUser1.Load += adminAddUser1_Load_3;
             // 
             // adminAddCategories1
             // 
@@ -354,14 +365,6 @@
             cashierCustomersForm1.Name = "cashierCustomersForm1";
             cashierCustomersForm1.Size = new Size(1384, 945);
             cashierCustomersForm1.TabIndex = 0;
-            // 
-            // adminAddUser1
-            // 
-            adminAddUser1.Location = new Point(3, 0);
-            adminAddUser1.Name = "adminAddUser1";
-            adminAddUser1.Size = new Size(1282, 884);
-            adminAddUser1.TabIndex = 4;
-            adminAddUser1.Load += adminAddUser1_Load_3;
             // 
             // MainForm
             // 

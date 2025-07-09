@@ -15,11 +15,20 @@ namespace InventoryManagementSystem
         public MainForm()
         {
             InitializeComponent();
+
+            button10.BringToFront();
+            button10.Visible = true;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void displayUsername()
+        {
+            string username = Form1.username.Substring(0, 1).ToUpper() + Form1.username.Substring(1);
+            label2.Text = username;
         }
 
         private void close_Click(object sender, EventArgs e)
@@ -96,7 +105,7 @@ namespace InventoryManagementSystem
         private void button2_Click(object sender, EventArgs e)
         {
             adminDashborad1.Visible = true;
-            // adminAddUser.Visible = false;
+            adminAddUser1.Visible = false;
             adminAddCategories1.Visible = false;
             adminAddProducts1.Visible = false;
             cashierCustomersForm1.Visible = false;
@@ -114,23 +123,23 @@ namespace InventoryManagementSystem
         private void button6_Click(object sender, EventArgs e)
         {
             adminDashborad1.Visible = false;
-            // adminAddUser.Visible = true;
+            adminAddUser1.Visible = true;
             adminAddCategories1.Visible = false;
             adminAddProducts1.Visible = false;
             cashierCustomersForm1.Visible = false;
 
-            //AdminAddUsers aauForm = adminAddUser1 as AdminAddUsers;
+            AdminAddUser aauForm = adminAddUser1 as AdminAddUser;
 
-            // if (aauForm != null)
-            //{
-            //    aauForm.refreshData();
-            //}
+            if (aauForm != null)
+            {
+                aauForm.refreshData();
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             adminDashborad1.Visible = false;
-            // adminAddUser1.Visible = false;
+            adminAddUser1.Visible = false;
             adminAddCategories1.Visible = false;
             adminAddProducts1.Visible = false;
             cashierCustomersForm1.Visible = false;
@@ -141,7 +150,7 @@ namespace InventoryManagementSystem
         private void addCategories_btn_Click(object sender, EventArgs e)
         {
             adminDashborad1.Visible = false;
-            //adminAddUser1.Visible = false;
+            adminAddUser1.Visible = false;
             adminAddCategories1.Visible = true;
             adminAddProducts1.Visible = false;
             cashierCustomersForm1.Visible = false;
@@ -157,7 +166,7 @@ namespace InventoryManagementSystem
         private void addProducts_btn_Click(object sender, EventArgs e)
         {
             adminDashborad1.Visible = false;
-            //adminAddUser1.Visible = false;
+            adminAddUser1.Visible = false;
             adminAddCategories1.Visible = false;
             adminAddProducts1.Visible = true;
             cashierCustomersForm1.Visible = false;
@@ -174,7 +183,7 @@ namespace InventoryManagementSystem
         private void customers_btn_Click(object sender, EventArgs e)
         {
             adminDashborad1.Visible = false;
-            //adminAddUser1.Visible = false;
+            adminAddUser1.Visible = false;
             adminAddCategories1.Visible = false;
             adminAddProducts1.Visible = false;
             cashierCustomersForm1.Visible = true;
@@ -195,6 +204,23 @@ namespace InventoryManagementSystem
         private void adminAddUser1_Load_3(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            StockReport stockReport = new StockReport();
+            stockReport.Show();
+            adminDashborad1.Visible = false;
+            adminAddUser1.Visible = false;
+            adminAddCategories1.Visible = false;
+            adminAddProducts1.Visible = false;
+            cashierCustomersForm1.Visible = false;
+            button10.Visible = true;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace InventoryManagementSystem
 
     internal class CustomersData
     {
-         SqlConnection connect = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Inventory;Integrated Security=True;");
+        SqlConnection connect = new SqlConnection(@"Data Source=DESKTOP-RN2T9CM\SQLEXPRESS;Initial Catalog=Inventory_managment;Integrated Security=True");
 
         public string CustomerID { get; set; }
         public string TotalPrice { get; set; }

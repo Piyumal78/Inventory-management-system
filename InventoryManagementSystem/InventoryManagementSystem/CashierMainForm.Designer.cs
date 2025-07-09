@@ -42,7 +42,7 @@
             button4 = new Button();
             button3 = new Button();
             dashboard_btn = new Button();
-            label2 = new Label();
+            user_username = new Label();
             pictureBox1 = new PictureBox();
             panel3 = new Panel();
             adminDashborad1 = new AdminDashborad();
@@ -109,7 +109,7 @@
             panel2.Controls.Add(button4);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(dashboard_btn);
-            panel2.Controls.Add(label2);
+            panel2.Controls.Add(user_username);
             panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 86);
@@ -268,17 +268,17 @@
             dashboard_btn.UseVisualStyleBackColor = true;
             dashboard_btn.Click += button2_Click;
             // 
-            // label2
+            // user_username
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(0, 0, 192);
-            label2.Location = new Point(52, 130);
-            label2.Name = "label2";
-            label2.Size = new Size(175, 28);
-            label2.TabIndex = 2;
-            label2.Text = "Welcome! Cashier";
-            label2.Click += label2_Click;
+            user_username.AutoSize = true;
+            user_username.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            user_username.ForeColor = Color.FromArgb(0, 0, 192);
+            user_username.Location = new Point(52, 130);
+            user_username.Name = "user_username";
+            user_username.Size = new Size(175, 28);
+            user_username.TabIndex = 2;
+            user_username.Text = "Welcome! Cashier";
+            user_username.Click += label2_Click;
             // 
             // pictureBox1
             // 
@@ -305,20 +305,6 @@
             panel3.Size = new Size(1072, 715);
             panel3.TabIndex = 19;
             // 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            // cashierOrder1
-            // 
-            cashierOrder1.Location = new Point(0, 0);
-            cashierOrder1.Name = "cashierOrder1";
-            cashierOrder1.Size = new Size(1282, 884);
-            cashierOrder1.TabIndex = 1;
-            
-            // 
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
             // adminDashborad1
             // 
             adminDashborad1.Location = new Point(0, 0);
@@ -382,7 +368,7 @@
         private Button button4;
         private Button button3;
         private Button dashboard_btn;
-        private Label label2;
+        private Label user_username;
         private PictureBox pictureBox1;
         private Button order_btn;
         private Panel panel3;

@@ -7,21 +7,18 @@ namespace InventoryManagementSystem
 {
     public partial class AdminAddUser : UserControl
     {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        private SqlConnection connect = new SqlConnection(@"Data Source=PIYUMAL\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False");
-=======
-        private SqlConnection connect = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Inventory;Integrated Security=True");
->>>>>>> Stashed changes
-=======
-        private SqlConnection connect = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Inventory;Integrated Security=True");
->>>>>>> Stashed changes
+
+        private SqlConnection connect = new SqlConnection(@"Data Source=DESKTOP-RN2T9CM\SQLEXPRESS;Initial Catalog=Inventory_managment;Integrated Security=True");
+
         private int selectedUserId = 0;
 
         public AdminAddUser()
         {
             InitializeComponent();
             displayAllUsersData();
+            //dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            //dataGridView1.CellClick += dataGridView1_CellContentClick; // reuse same logic
+
         }
         public void refreshData()
         {
@@ -30,7 +27,7 @@ namespace InventoryManagementSystem
                 Invoke((MethodInvoker)refreshData);
                 return;
             }
-            InitializeComponent();
+
             displayAllUsersData();
         }
         public void displayAllUsersData()
@@ -204,46 +201,50 @@ namespace InventoryManagementSystem
             }
         }
 
-        private void addUsers_removeBtn_Click(object sender, EventArgs e)
-        {
-            if (selectedUserId == 0)
-            {
-                MessageBox.Show("Please select a user to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+        //private void addUsers_removeBtn_Click(object sender, EventArgs e)
+        //{
+        //    //if (selectedUserId == 0)
+        //    //{
+        //    //    MessageBox.Show("Please select a user to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    //    return;
+        //    //}
 
-            if (MessageBox.Show("Are you sure you want to delete this user?", "Confirm",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                try
-                {
-                    connect.Open();
+        //    //if (MessageBox.Show($"Are you sure you want to delete User ID: {selectedUserId}?",
+        //    //                    "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+        //    //{
+        //    //    try
+        //    //    {
+        //    //        connect.Open();
 
-                    string deleteSql = "DELETE FROM users WHERE id = @id";
-                    using (SqlCommand cmd = new SqlCommand(deleteSql, connect))
-                    {
-                        cmd.Parameters.AddWithValue("@id", selectedUserId);
+        //    //        string deleteSql = "DELETE FROM users WHERE id = @id";
+        //    //        using (SqlCommand cmd = new SqlCommand(deleteSql, connect))
+        //    //        {
+        //    //            cmd.Parameters.AddWithValue("@id", selectedUserId);
 
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("User deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            clearFields();
-                            displayAllUsersData();
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    if (connect.State == ConnectionState.Open)
-                        connect.Close();
-                }
-            }
-        }
+        //    //            int rowsAffected = cmd.ExecuteNonQuery();
+        //    //            if (rowsAffected > 0)
+        //    //            {
+        //    //                MessageBox.Show("User deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    //                clearFields();
+        //    //                displayAllUsersData();
+        //    //            }
+        //    //            else
+        //    //            {
+        //    //                MessageBox.Show("No user was deleted. Please try again.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //    //            }
+        //    //        }
+        //    //    }
+        //    //    catch (Exception ex)
+        //    //    {
+        //    //        MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    //    }
+        //    //    finally
+        //    //    {
+        //    //        if (connect.State == ConnectionState.Open)
+        //    //            connect.Close();
+        //    //    }
+        //    //}
+        //}
 
         private void clearFields()
         {
@@ -254,10 +255,10 @@ namespace InventoryManagementSystem
             addUsers_status.SelectedIndex = -1;
         }
 
-        private void addUsers_clearBtn_Click(object sender, EventArgs e)
-        {
-            clearFields();
-        }
+        //private void addUsers_clearBtn_Click(object sender, EventArgs e)
+        //{
+        //    clearFields();
+        //}
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -278,6 +279,56 @@ namespace InventoryManagementSystem
         private void AdminAddUser_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void addUsers_removeBtn_Click_1(object sender, EventArgs e)
+        {
+            if (selectedUserId == 0)
+            {
+                MessageBox.Show("Please select a user to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (MessageBox.Show($"Are you sure you want to delete User ID: {selectedUserId}?",
+                                "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    connect.Open();
+
+                    string deleteSql = "DELETE FROM users WHERE id = @id";
+                    using (SqlCommand cmd = new SqlCommand(deleteSql, connect))
+                    {
+                        cmd.Parameters.AddWithValue("@id", selectedUserId);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("User deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clearFields();
+                            displayAllUsersData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No user was deleted. Please try again.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    if (connect.State == ConnectionState.Open)
+                        connect.Close();
+                }
+            }
+        }
+
+        private void addUsers_clearBtn_Click_1(object sender, EventArgs e)
+        {
+            clearFields();
         }
     }
 }

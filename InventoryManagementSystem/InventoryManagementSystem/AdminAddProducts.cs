@@ -15,7 +15,7 @@ namespace InventoryManagementSystem
 {
     public partial class AdminAddProducts : UserControl
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=PIYUMAL\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True;Encrypt=False");
+        SqlConnection connect = new SqlConnection(@"Data Source=DESKTOP-RN2T9CM\SQLEXPRESS;Initial Catalog=Inventory_managment;Integrated Security=True");
         public AdminAddProducts()
         {
             InitializeComponent();
@@ -424,6 +424,11 @@ namespace InventoryManagementSystem
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void addProducts_category_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

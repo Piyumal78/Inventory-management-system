@@ -85,6 +85,7 @@
             addUsers_clearBtn.TabIndex = 11;
             addUsers_clearBtn.Text = "Clear";
             addUsers_clearBtn.UseVisualStyleBackColor = false;
+            addUsers_clearBtn.Click += addUsers_clearBtn_Click_1;
             // 
             // addUsers_removeBtn
             // 
@@ -99,6 +100,7 @@
             addUsers_removeBtn.TabIndex = 10;
             addUsers_removeBtn.Text = "Remove";
             addUsers_removeBtn.UseVisualStyleBackColor = false;
+            addUsers_removeBtn.Click += addUsers_removeBtn_Click_1;
             // 
             // addUsers_updateBtn
             // 

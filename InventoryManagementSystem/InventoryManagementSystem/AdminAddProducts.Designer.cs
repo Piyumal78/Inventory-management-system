@@ -298,6 +298,7 @@
             addProducts_category.Name = "addProducts_category";
             addProducts_category.Size = new Size(236, 28);
             addProducts_category.TabIndex = 7;
+            addProducts_category.SelectedIndexChanged += addProducts_category_SelectedIndexChanged;
             // 
             // label4
             // 

@@ -13,8 +13,6 @@ qty INT NULL,
 orig_price FLOAT NULL,
 total_price FLOAT NULL,
 order_date DATE NUll
-
-
 )
 
 SELECT * FROM orders

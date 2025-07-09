@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierOrder));
             panel1 = new Panel();
             label5 = new Label();
             cashierOrder_clearBtn = new Button();
@@ -57,6 +58,8 @@
             cashierOrder_change = new Label();
             cashierOrder_totalPrice = new Label();
             label11 = new Label();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
+            printPreviewDialog1 = new PrintPreviewDialog();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)cashierOrder_qty).BeginInit();
             panel2.SuspendLayout();
@@ -85,13 +88,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(675, 345);
             panel1.TabIndex = 0;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            panel1.Paint += panel1_Paint;
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
             // 
             // label5
             // 
@@ -197,16 +193,9 @@
             label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             label6.Location = new Point(51, 213);
             label6.Name = "label6";
-            label6.Size = new Size(103, 25);
+            label6.Size = new Size(96, 25);
             label6.TabIndex = 1;
-<<<<<<< Updated upstream
-            label6.Text = "Proce($):";
-=======
             label6.Text = "Price($):";
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
             // 
             // label8
             // 
@@ -227,13 +216,6 @@
             cashierOrder_prodName.Size = new Size(107, 25);
             cashierOrder_prodName.TabIndex = 1;
             cashierOrder_prodName.Text = "Category:";
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            cashierOrder_prodName.Click += cashierOrder_prodName_Click;
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
             // 
             // label4
             // 
@@ -282,6 +264,7 @@
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.Size = new Size(672, 282);
             dataGridView2.TabIndex = 0;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
             // panel3
             // 
@@ -323,14 +306,7 @@
             cashierOrder_receipt.TabIndex = 11;
             cashierOrder_receipt.Text = "Receipt";
             cashierOrder_receipt.UseVisualStyleBackColor = false;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
             cashierOrder_receipt.Click += cashierOrder_receipt_Click;
->>>>>>> Stashed changes
-=======
-            cashierOrder_receipt.Click += cashierOrder_receipt_Click;
->>>>>>> Stashed changes
             // 
             // cashierOrder_payOrders
             // 
@@ -354,6 +330,7 @@
             cashierOrder_amount.Name = "cashierOrder_amount";
             cashierOrder_amount.Size = new Size(178, 34);
             cashierOrder_amount.TabIndex = 2;
+            cashierOrder_amount.TextChanged += cashierOrder_amount_TextChanged;
             // 
             // dataGridView1
             // 
@@ -363,6 +340,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(333, 274);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label13
             // 
@@ -383,13 +361,6 @@
             label9.Size = new Size(151, 25);
             label9.TabIndex = 1;
             label9.Text = "Total Price($):";
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            label9.Click += label9_Click;
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
             // 
             // cashierOrder_change
             // 
@@ -421,6 +392,16 @@
             label11.TabIndex = 1;
             label11.Text = "Amount($):";
             // 
+            // printPreviewDialog1
+            // 
+            printPreviewDialog1.AutoScrollMargin = new Size(0, 0);
+            printPreviewDialog1.AutoScrollMinSize = new Size(0, 0);
+            printPreviewDialog1.ClientSize = new Size(400, 300);
+            printPreviewDialog1.Enabled = true;
+            printPreviewDialog1.Icon = (Icon)resources.GetObject("printPreviewDialog1.Icon");
+            printPreviewDialog1.Name = "printPreviewDialog1";
+            printPreviewDialog1.Visible = false;
+            // 
             // CashierOrder
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -430,6 +411,7 @@
             Controls.Add(panel1);
             Name = "CashierOrder";
             Size = new Size(1026, 707);
+            Load += CashierOrder_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)cashierOrder_qty).EndInit();
@@ -473,5 +455,7 @@
         private Button cashierOrder_receipt;
         private Button cashierOrder_payOrders;
         private Label label5;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private PrintPreviewDialog printPreviewDialog1;
     }
 }

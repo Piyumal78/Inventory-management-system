@@ -34,10 +34,18 @@
     <Compile Update="RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="StockReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="RegisterForm.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="DataSetStock.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
 </Project>
